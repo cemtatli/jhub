@@ -12,7 +12,7 @@ export const LoginForm = () => {
     console.log('clicked Login !')
   }
   return (
-    <form onSubmit={submitHandle} className="mt-8 flex w-full max-w-md flex-col gap-5">
+    <form onSubmit={submitHandle} className="mt-8 flex w-full max-w-lg flex-col gap-5">
       <InputWithLabel label={'E-mail'} id="email" type="email" />
       <InputWithLabel label={'Password'} id="password" type="password" />
       <Button type="submit">Log in</Button>

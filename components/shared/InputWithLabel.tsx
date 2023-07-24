@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label'
 import { InputWithLabelProps } from '@/types'
 import { Eye, EyeOff } from 'lucide-react'
 
-export function InputWithLabel({ label, type, id }: InputWithLabelProps) {
+export function InputWithLabel({ label, type, id, name, value, onChange }: InputWithLabelProps) {
   const [showPassword, setShowPassword] = useState(false)
   return (
     <div className="grid w-full items-center gap-1.5">
@@ -15,6 +15,9 @@ export function InputWithLabel({ label, type, id }: InputWithLabelProps) {
         <Input
           type={showPassword ? 'text' : type}
           id={id}
+          onChange={onChange}
+          name={name}
+          value={value}
           placeholder={label}
           className={type === 'password' ? 'pr-10' : 'pr-3'} // default input px-3
         />

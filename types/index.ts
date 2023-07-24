@@ -1,14 +1,22 @@
+import { ChangeEventHandler, MouseEventHandler, ReactElement } from 'react'
+
 export type InputWithLabelProps = {
   label: string
   id: string
+  name: string
   type: string
+  value: string
+  onChange: ChangeEventHandler<HTMLInputElement> // veya React.ChangeEventHandler<HTMLInputElement>
 }
+
 export type ButtonWithIconProps = {
   label?: string
   size?: number
   placeholder?: string
   variant?: string
   className?: string
+  children?: React.ReactNode
+  onClick: MouseEventHandler<HTMLButtonElement>
 }
 export type InputWithButtonProps = {
   className?: string

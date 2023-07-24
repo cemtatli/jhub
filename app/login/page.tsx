@@ -18,9 +18,11 @@ const Login = () => {
           src="https://images.pexels.com/photos/140945/pexels-photo-140945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         />
       </div>
-      <div className="flex w-full flex-col items-center">
-        <Logo />
-        <h2 className="mb-4 font-medium">Join and discover job opportunities</h2>
+      <div className="flex w-full flex-col items-center justify-center xl:items-end">
+        <div className="flex w-full max-w-lg flex-col items-center justify-center">
+          <Logo />
+          <h2 className="mb-4 font-medium">Join and discover job opportunities</h2>
+        </div>
         <LoginForm />
       </div>
     </section>
