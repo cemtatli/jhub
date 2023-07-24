@@ -43,12 +43,10 @@ export const SignUpForm = () => {
       </TabsContent>
       <TabsContent value="employer">
         <form onSubmit={submitHandle} className="mt-8 flex w-full max-w-lg flex-col gap-5">
-          <span className="flex gap-x-2.5">
-            <InputWithLabel label={'Company Name'} id="company_name" type="text" />
-            <InputFile label={'Company Logo'} />
-          </span>
+          <InputWithLabel label={'Company Name'} id="company_name" type="text" />
           <InputWithLabel label={'E-mail'} id="email" type="email" />
           <InputWithLabel label={'Password'} id="password" type="password" />
+          <InputFile label={'Upload your company logo'} />
           <CheckboxWithText />
           <Button type="submit">Sign Up</Button>
           <Divider label="or" />

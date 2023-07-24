@@ -32,4 +32,5 @@ export type JobsItemProps = {
 }
 export type InputFileProps = {
   label: string
+  className?: string
 }

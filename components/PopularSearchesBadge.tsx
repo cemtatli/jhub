@@ -7,7 +7,7 @@ export const PopularSearchesBadge = () => {
     <>
       {popularSearchs.map(({ title }, key) => (
         <Badge
-          className="shrink-0 cursor-pointer p-1.5 px-3 transition-all duration-300 hover:bg-destructive-foreground"
+          className="w-fit shrink-0 cursor-pointer p-1.5 px-3 transition-all duration-300 hover:bg-destructive-foreground"
           variant={'outline'}
           key={key}>
           {title}

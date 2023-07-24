@@ -8,7 +8,7 @@ export const PopularSearches = () => {
     <div className="mt-12 flex flex-col items-center justify-center gap-y-5">
       <span className="self-start text-2xl font-semibold">Popular Searches</span>
       <InputWithButton className="w-full" label={'Search'} />
-      <div className="flex flex-wrap items-center gap-2.5">
+      <div className="flex-items-center flex  flex-wrap gap-2.5 ">
         <PopularSearchesBadge />
       </div>
     </div>
