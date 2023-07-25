@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <Header />
         <MainLayout>{children}</MainLayout>
-        <ToastContainer position="top-center" autoClose={2000} theme="light" />
+        <ToastContainer position="top-center" autoClose={3000} theme="light" />
       </body>
     </html>
   )

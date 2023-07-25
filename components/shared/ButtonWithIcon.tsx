@@ -1,12 +1,11 @@
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
-import { BackIcon, GitHubIcon, GoogleIcon } from '@/components/ui/icons'
+import { BackIcon, GitHubIcon, GoogleIcon, LoadingIcon } from '@/components/ui/icons'
 import { ButtonWithIconProps } from '@/types'
-import { Children } from 'react'
 
 export function ButtonWithIcon({
   size = 24,
-  label = 'Login with Google',
+  label = '',
   variant = '',
   className,
   children,
@@ -22,6 +21,9 @@ export function ButtonWithIcon({
       break
     case 'back':
       selectedIcon = <BackIcon size={size} />
+      break
+    case 'loading':
+      selectedIcon = <LoadingIcon size={size} />
       break
   }
 

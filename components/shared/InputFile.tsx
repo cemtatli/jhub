@@ -17,7 +17,7 @@ export function InputFile({ label, className }: InputFileProps) {
       <Label
         htmlFor="picture"
         className={cn(
-          'flex h-20 cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed transition-all group-hover:bg-muted',
+          'h-24 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed transition-all group-hover:bg-muted',
           fileUploaded ? 'border-green-600 bg-green-50 text-green-600 group-hover:bg-green-50' : '',
           className,
         )}>

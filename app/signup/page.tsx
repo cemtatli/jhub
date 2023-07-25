@@ -3,8 +3,6 @@
 import React from 'react'
 import { SignUpForm } from './components/SignUpForm'
 import { Metadata } from 'next'
-import { Logo } from '@/components/shared/Logo'
-
 export const metadata: Metadata = {
   title: 'JHubs — Sign up',
 }

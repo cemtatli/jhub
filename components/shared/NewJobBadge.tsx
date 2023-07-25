@@ -3,7 +3,6 @@ import Link from 'next/link'
 import React from 'react'
 
 export const JobsBadge = () => {
-  // API'den gelecek jobsCount değeri
   const apiResponse = {
     jobsCount: 12,
   }

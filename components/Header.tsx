@@ -8,7 +8,7 @@ import { HeaderNavigationMenu } from '@/components/shared/NavigationMenu'
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 flex h-24 items-center justify-center border-b border-gray-200 bg-white">
+    <header className="sticky top-0 flex h-16 items-center justify-center border-b border-gray-200 bg-white md:h-24">
       <div className="container flex items-center justify-between xl:px-0">
         <Logo />
         {/*    <HeaderNavigationMenu /> */}

@@ -6,7 +6,6 @@ import { auth } from '../firebase'
 import { GoogleAuthProvider } from 'firebase/auth'
 import { toast } from 'react-toastify'
 import { useRouter } from 'next/navigation'
-
 import { ButtonWithIcon } from '@/components/shared/ButtonWithIcon'
 
 const provider = new GoogleAuthProvider()
@@ -19,18 +18,18 @@ const LoginWithGoogleButton = () => {
     try {
       setLoading(true)
       const data = await signInWithPopup(auth, provider)
-      const credential = GoogleAuthProvider.credentialFromResult(data)
+      const credential: any = GoogleAuthProvider.credentialFromResult(data)
       const token = credential.accessToken
       const user = data.user
       if (user) {
-        toast.success(`${user.email} giriş yapıldı`)
+        toast.success(`Welcome ${user.displayName}`)
         router.push('/')
       }
       console.log(user)
-    } catch (error) {
-      console.log(error)
-      const credential = GoogleAuthProvider.credentialFromError(error)
+    } catch (error: any) {
+      const credential: any = GoogleAuthProvider.credentialFromError(error)
       toast.error(credential)
+      toast.error(error.message)
     } finally {
       setLoading(false)
     }
@@ -39,8 +38,8 @@ const LoginWithGoogleButton = () => {
   return (
     <ButtonWithIcon
       onClick={loginWithGoogle}
-      size={22}
-      variant={loading ? '' : 'google'}
+      size={20}
+      variant={loading ? 'loading' : 'google'}
       label={loading ? 'Loading' : 'Login with Google'}
     />
   )
