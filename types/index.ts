@@ -26,6 +26,7 @@ export type CheckboxWithTextProps = {
   id?: string
   label?: string
   text?: string
+  name: string
 }
 export type NavigationMenuItemProps = {
   title: string

@@ -4,9 +4,9 @@ import { useState } from 'react'
 import { signInWithPopup } from 'firebase/auth'
 import { auth } from '../firebase'
 import { GoogleAuthProvider } from 'firebase/auth'
-import { toast } from 'react-toastify'
 import { useRouter } from 'next/navigation'
 import { ButtonWithIcon } from '@/components/shared/ButtonWithIcon'
+import { toast } from 'react-hot-toast'
 
 const provider = new GoogleAuthProvider()
 
@@ -22,7 +22,7 @@ const LoginWithGoogleButton = () => {
       const token = credential.accessToken
       const user = data.user
       if (user) {
-        toast.success(`Welcome ${user.displayName}`)
+        toast.success(`Successfully registered.`)
         router.push('/')
       }
       console.log(user)

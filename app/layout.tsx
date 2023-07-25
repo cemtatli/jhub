@@ -3,9 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { MainLayout } from '@/components/layout'
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-
+import { Toaster } from 'react-hot-toast'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -25,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <Header />
         <MainLayout>{children}</MainLayout>
-        <ToastContainer position="top-center" autoClose={3000} theme="light" />
+        <Toaster position="top-center" reverseOrder={true} />
       </body>
     </html>
   )

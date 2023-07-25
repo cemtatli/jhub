@@ -1,4 +1,4 @@
-@import url("https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,400&display=swap");
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -72,13 +72,17 @@
 
 @layer base {
   * {
-    @apply border-border scroll-smooth antialiased;
+    @apply scroll-smooth border-border antialiased;
     -webkit-text-size-adjust: 100%;
   }
   body {
-    @apply bg-background text-foreground text-base;
+    @apply bg-background text-base text-foreground;
   }
   #__next {
     @apply min-h-dynamic-screen;
   }
+}
+
+small {
+  @apply -mt-2.5 leading-none text-red-500;
 }

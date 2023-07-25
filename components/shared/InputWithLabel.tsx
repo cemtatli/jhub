@@ -15,7 +15,6 @@ export function InputWithLabel({ label, type, id, name, value, onChange }: Input
         <Input
           type={showPassword ? 'text' : type}
           id={id}
-          onChange={onChange}
           name={name}
           value={value}
           placeholder={label}

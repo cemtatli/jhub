@@ -25,10 +25,18 @@ export function ButtonWithIcon({
     case 'loading':
       selectedIcon = <LoadingIcon size={size} />
       break
+    default:
+      selectedIcon = null
   }
 
   return (
-    <Button onClick={onClick} className={cn('transition-all hover:bg-red-500', className)}>
+    <Button
+      onClick={onClick}
+      className={cn(
+        'transition-all hover:bg-red-500',
+        variant === 'loading' ? 'animate-pulse bg-gradient-to-l from-zinc-950 to-zinc-900' : '',
+        className,
+      )}>
       {selectedIcon}
       {label}
       {children}
