@@ -17,7 +17,7 @@ const SignUp = () => {
           src="https://images.pexels.com/photos/140945/pexels-photo-140945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         />
       </div>
-      <div className="flex w-full flex-col items-center justify-center xl:items-end">
+      <div className="flex w-full flex-col items-center justify-center xl:items-end ">
         <SignUpForm />
       </div>
     </section>

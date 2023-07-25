@@ -84,5 +84,5 @@
 }
 
 small {
-  @apply -mt-2.5 leading-none text-red-500;
+  @apply mt-1 leading-none text-red-500;
 }

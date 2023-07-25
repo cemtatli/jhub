@@ -6,6 +6,7 @@ export type InputWithLabelProps = {
   name: string
   type: string
   value?: string
+  className: any
   onChange?: ChangeEventHandler<HTMLInputElement>
 }
 export type ButtonWithIconProps = {

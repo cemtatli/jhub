@@ -15,10 +15,10 @@ export const userRegisterSchema = yup.object().shape({
       'Özel karakter içermeli, büyük ve küçük harf ve rakam içermelidir.',
     )
     .required('Şifre alanı zorunludur.'),
-  confirm: yup
+  /*   confirm: yup
     .boolean()
     .oneOf([true], 'Lütfen onay kutusunu işaretleyin.')
-    .required('Onay kutusu zorunludur.'),
+    .required('Onay kutusu zorunludur.'), */
 })
 
 export const employerRegisterSchema = yup.object().shape({

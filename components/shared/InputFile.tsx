@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils'
 export function InputFile({ label, className }: InputFileProps) {
   const [fileUploaded, setFileUploaded] = useState(false)
 
-  const handleFileChange = (e) => {
+  const handleFileChange = (e: any) => {
     e.target.files.length > 0 ? setFileUploaded(true) : setFileUploaded(false)
   }
 
@@ -17,7 +17,7 @@ export function InputFile({ label, className }: InputFileProps) {
       <Label
         htmlFor="picture"
         className={cn(
-          'h-24 flex cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed transition-all group-hover:bg-muted',
+          'flex h-24 cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed transition-all hover:border-gray-400 group-hover:bg-muted/80',
           fileUploaded ? 'border-green-600 bg-green-50 text-green-600 group-hover:bg-green-50' : '',
           className,
         )}>

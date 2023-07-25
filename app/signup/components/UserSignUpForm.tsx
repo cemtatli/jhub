@@ -2,9 +2,7 @@
 
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { CheckboxWithText } from '@/components/shared/CheckboxWithText'
 import { Divider } from '@/components/shared/Divider'
-import { InputWithLabel } from '@/components/shared/InputWithLabel'
 import { Button } from '@/components/ui/button'
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { auth } from '@/app/firebase'
@@ -14,6 +12,9 @@ import { toast } from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { userRegisterSchema } from '@/validations/register-schema'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { InputWithLabel } from '@/components/shared/InputWithLabel'
 
 export const UserSignUpForm = () => {
   const {
@@ -23,24 +24,17 @@ export const UserSignUpForm = () => {
   } = useForm({
     resolver: yupResolver(userRegisterSchema),
   })
+
   const router = useRouter()
   const [userRegister, setUserRegister] = useState({
     email: '',
     password: '',
     name: '',
     surname: '',
-    confirm: false,
   })
-  /* 
   const userRegisterData = (e: { target: { name: any; value: any } }) => {
     setUserRegister({ ...userRegister, [e.target.name]: e.target.value })
-  } */
-
-  const submitHandle = (e: any) => {
-    e.preventDefault()
-    userAuthFunction()
   }
-
   const userAuthFunction = async () => {
     try {
       const data = await createUserWithEmailAndPassword(
@@ -57,37 +51,70 @@ export const UserSignUpForm = () => {
       }
       console.log(user)
     } catch (error: any) {
-      console.log(error)
+      console.error(error)
       toast.error(error.message)
     }
   }
 
   return (
     <div className="mt-8 flex w-full max-w-lg flex-col gap-5">
-      <form onSubmit={handleSubmit(submitHandle)} className="flex w-full max-w-lg flex-col gap-5">
-        <InputWithLabel {...register('name')} label={'Name'} id="name" type="text" name="name" />
-        {errors.name && <small>{errors.name.message}</small>}
-        <InputWithLabel
-          {...register('surname')}
-          label={'Surname'}
-          name="surname"
-          id="surname"
-          type="text"
-        />
-        {errors.surname && <small>{errors.surname.message}</small>}
-        <InputWithLabel
-          {...register('email')}
-          label={'E-mail'}
-          id="email"
-          name="email"
-          type="email"
-        />
-        {errors.email && <small>{errors.email.message}</small>}
-        <InputWithLabel label={'Password'} id="password" name="password" type="password" />
-        {errors.password && <small>{errors.password.message}</small>}
-        <CheckboxWithText name={'confirm'} />
-        {errors.confirm && <small className="">{errors.confirm.message}</small>}{' '}
-        {/* Hata mesajını göster */}
+      <form
+        onSubmit={handleSubmit(userAuthFunction)}
+        className="flex w-full max-w-lg flex-col gap-5">
+        <div className="grid w-full items-center gap-1.5">
+          <Label>Name </Label>
+          <Input
+            {...register('name')}
+            id="name"
+            type="text"
+            placeholder="Name"
+            onChange={userRegisterData}
+            value={userRegister.name}
+            name="name"
+            className={`${errors.name ? 'border-red-500 !ring-red-500' : ''}`}
+          />
+          {errors.name && <small>{errors.name.message}</small>}
+        </div>
+        <div className="grid w-full items-center gap-1.5">
+          <Label>Surname </Label>
+          <Input
+            {...register('surname')}
+            name="surname"
+            id="surname"
+            type="text"
+            onChange={userRegisterData}
+            value={userRegister.surname}
+            className={`${errors.name ? 'border-red-500 !ring-red-500' : ''}`}
+          />
+          {errors.surname && <small>{errors.surname.message}</small>}
+        </div>
+        <div className="grid w-full items-center gap-1.5">
+          <Label>Email </Label>
+          <Input
+            {...register('email')}
+            id="email"
+            name="email"
+            type="email"
+            onChange={userRegisterData}
+            value={userRegister.email}
+            className={`${errors.name ? 'border-red-500 !ring-red-500' : ''}`}
+          />
+          {errors.email && <small>{errors.email.message}</small>}
+        </div>
+        <div className="grid w-full items-center gap-1.5">
+          <Label>Password </Label>
+          <Input
+            {...register('password')}
+            name="password"
+            id="password"
+            type="password"
+            onChange={userRegisterData}
+            value={userRegister.password}
+            className={`${errors.name ? 'border-red-500 !ring-red-500' : ''}`}
+          />
+          {errors.password && <small>{errors.password.message}</small>}
+        </div>
+
         <Button type="submit">Sign Up</Button>
       </form>
       <Divider label="or" />
