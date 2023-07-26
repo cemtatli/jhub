@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
@@ -17,41 +17,28 @@ import { toast } from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { userRegisterSchema } from '@/validations/register-schema'
-import { Checkbox } from '@/components/ui/checkbox'
 
 export const UserSignUpForm = () => {
   const router = useRouter()
 
   const {
-    register,
     handleSubmit,
+    register,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(userRegisterSchema),
   })
 
-  const [userRegister, setUserRegister] = useState({
-    email: '',
-    password: '',
-    name: '',
-    surname: '',
-  })
-
-  const userRegisterData = (e: { target: { name: string; value: string } }) => {
-    setUserRegister({ ...userRegister, [e.target.name]: e.target.value })
-  }
-
-  const userAuthFunction = async () => {
+  const onSubmit = async (data: any) => {
     try {
-      const data = await createUserWithEmailAndPassword(auth, userRegister.email, userRegister.password)
-      const user = data.user
+      const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password)
+      const user = userCredential.user
       if (user) {
-        const displayName = `${userRegister.name} ${userRegister.surname}`
+        const displayName = `${data.name} ${data.surname}`
         await updateProfile(user, { displayName })
-        toast.success(`${user.displayName} have successfully registered.`)
+        toast.success(`${displayName} have successfully registered.`)
         router.push('/')
       }
-      console.log(user)
     } catch (error: any) {
       console.error(error)
       toast.error(error.message)
@@ -60,7 +47,7 @@ export const UserSignUpForm = () => {
 
   return (
     <div className="mt-8 flex w-full max-w-lg flex-col gap-5">
-      <form onSubmit={handleSubmit(userAuthFunction)} className="flex w-full max-w-lg flex-col gap-5">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex w-full max-w-lg flex-col gap-5">
         <div className="grid w-full items-center gap-1.5">
           <Label>Name </Label>
           <Input
@@ -68,10 +55,8 @@ export const UserSignUpForm = () => {
             id="name"
             type="text"
             placeholder="Name"
-            onChange={userRegisterData}
-            value={userRegister.name}
             name="name"
-            className={`${errors.name ? 'border-red-500 !ring-red-500' : ''}`}
+            className={`${errors.name ? 'error' : ''}`}
           />
           {errors.name && <small>{errors.name.message}</small>}
         </div>
@@ -83,9 +68,7 @@ export const UserSignUpForm = () => {
             id="surname"
             type="text"
             placeholder="Surname"
-            onChange={userRegisterData}
-            value={userRegister.surname}
-            className={`${errors.name ? 'border-red-500 !ring-red-500' : ''}`}
+            className={`${errors.name ? 'error' : ''}`}
           />
           {errors.surname && <small>{errors.surname.message}</small>}
         </div>
@@ -97,9 +80,7 @@ export const UserSignUpForm = () => {
             name="email"
             type="email"
             placeholder="Email"
-            onChange={userRegisterData}
-            value={userRegister.email}
-            className={`${errors.name ? 'border-red-500 !ring-red-500' : ''}`}
+            className={`${errors.name ? 'error' : ''}`}
           />
           {errors.email && <small>{errors.email.message}</small>}
         </div>
@@ -111,17 +92,15 @@ export const UserSignUpForm = () => {
             id="password"
             type="password"
             placeholder="Password"
-            onChange={userRegisterData}
-            value={userRegister.password}
-            className={`${errors.name ? 'border-red-500 !ring-red-500' : ''}`}
+            className={`${errors.name ? 'error' : ''}`}
           />
           {errors.password && <small>{errors.password.message}</small>}
         </div>
         <div className="items-top flex flex-col gap-2">
           <div className="flex w-full items-center gap-x-2">
-            <Checkbox id="confirm" {...register('confirm')} />
+            <input type="checkbox" id="privacy" {...register('privacy')} className="accent-foreground " />
             <Label
-              htmlFor="confirm"
+              htmlFor="privacy"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
               Accept terms and conditions
             </Label>

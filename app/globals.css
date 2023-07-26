@@ -83,6 +83,11 @@
   }
 }
 
-small {
-  @apply mt-[3px] leading-none text-red-500;
+@layer components {
+  .error {
+    @apply border-red-500 !ring-red-500;
+  }
+  small {
+    @apply mt-1 leading-none text-red-500;
+  }
 }
