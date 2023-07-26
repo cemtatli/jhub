@@ -1,13 +1,13 @@
 'use client'
 
+import Link from 'next/link'
+import React from 'react'
 import LoginWithGoogleButton from '@/app/firebase/google-auth'
 import { CheckboxWithText } from '@/components/shared/CheckboxWithText'
 import { Divider } from '@/components/shared/Divider'
 import { InputFile } from '@/components/shared/InputFile'
 import { InputWithLabel } from '@/components/shared/InputWithLabel'
 import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import React from 'react'
 
 export const EmployerSignUpForm = () => {
   return (
@@ -23,8 +23,7 @@ export const EmployerSignUpForm = () => {
       <Divider label="or" />
       <LoginWithGoogleButton />
       <Link href="/login" className="text-center text-sm font-medium">
-        Do you have already{' '}
-        <span className="font-semibold underline hover:text-red-500">Account ?</span>
+        Do you have already <span className="font-semibold underline hover:text-red-500">Account ?</span>
       </Link>
     </div>
   )

@@ -14,7 +14,7 @@ import {
 import { Briefcase } from 'lucide-react'
 import { components } from '@/api/navigation-menu-item'
 import Link from 'next/link'
-import { Logo } from './Logo'
+import { Logo } from './shared/Logo'
 
 export function HeaderNavigationMenu() {
   return (

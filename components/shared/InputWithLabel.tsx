@@ -7,15 +7,7 @@ import { Eye, EyeOff } from 'lucide-react'
 import { InputWithLabelProps } from '@/types'
 import { cn } from '@/lib/utils'
 
-export function InputWithLabel({
-  className,
-  label,
-  type,
-  id,
-  name,
-  value,
-  ...props
-}: InputWithLabelProps) {
+export function InputWithLabel({ className, label, type, id, name, value, ...props }: InputWithLabelProps) {
   const [showPassword, setShowPassword] = useState(false)
   return (
     <div className={cn('grid w-full items-center gap-1.5', className)}>

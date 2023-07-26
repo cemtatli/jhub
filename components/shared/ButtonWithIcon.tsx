@@ -3,10 +3,10 @@ import { Button } from '@/components/ui/button'
 import { BackIcon, GitHubIcon, GoogleIcon, LoadingIcon } from '@/components/ui/icons'
 import { ButtonWithIconProps } from '@/types'
 
-export function ButtonWithIcon({
+function ButtonWithIcon({
   size = 24,
-  label = '',
-  variant = '',
+  text,
+  variant,
   className,
   children,
   onClick,
@@ -38,8 +38,10 @@ export function ButtonWithIcon({
         className,
       )}>
       {selectedIcon}
-      {label}
+      {text}
       {children}
     </Button>
   )
 }
+
+export { ButtonWithIcon }

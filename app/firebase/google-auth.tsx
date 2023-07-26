@@ -23,6 +23,7 @@ const LoginWithGoogleButton = () => {
       const user = data.user
       if (user) {
         toast.success(`Successfully registered.`)
+        localStorage.setItem('user', token)
         router.push('/')
       }
       console.log(user)
@@ -40,7 +41,7 @@ const LoginWithGoogleButton = () => {
       onClick={loginWithGoogle}
       size={20}
       variant={loading ? 'loading' : 'google'}
-      label={loading ? 'Loading' : 'Login with Google'}
+      text={loading ? 'Loading' : 'Login with Google'}
     />
   )
 }
