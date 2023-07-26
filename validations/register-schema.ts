@@ -16,7 +16,10 @@ export const userRegisterSchema = yup.object().shape({
 })
 
 export const employerRegisterSchema = yup.object().shape({
-  company_name: yup.string().min(2).required('Company name field is required.'),
+  company_name: yup
+    .string()
+    .min(2, 'Company Name must be at least 2 characters.')
+    .required('Company name field is required.'),
   email: yup.string().email('Please enter a valid email address.').required('Email field is required.'),
   password: yup
     .string()

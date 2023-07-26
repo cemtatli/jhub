@@ -5,7 +5,7 @@ import { InputFileProps } from '@/types'
 import { UploadCloud } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-export function InputFile({ label, className }: InputFileProps) {
+export function InputFile({ label, className, ...props }: InputFileProps) {
   const [fileUploaded, setFileUploaded] = useState(false)
 
   const handleFileChange = (e: any) => {
@@ -21,14 +21,10 @@ export function InputFile({ label, className }: InputFileProps) {
           fileUploaded ? 'border-green-600 bg-green-50 text-green-600 group-hover:bg-green-50' : '',
           className,
         )}>
-        {fileUploaded ? (
-          ''
-        ) : (
-          <UploadCloud className="h-5 w-5 transition-all duration-150 group-hover:scale-125" />
-        )}
+        {fileUploaded ? '' : <UploadCloud className="h-5 w-5 transition-all duration-150 group-hover:scale-125" />}
         {fileUploaded ? 'Successfully uploaded!' : label}
       </Label>
-      <Input id="picture" className="hidden" type="file" onChange={handleFileChange} />
+      <Input {...props} id="picture" className="hidden" type="file" onChange={handleFileChange} />
     </div>
   )
 }
