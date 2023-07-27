@@ -1,8 +1,9 @@
-import { login as loginHandle, logout as logoutHandle } from '@/store/auth'
 import { initializeApp } from 'firebase/app'
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
+
 import { toast } from 'react-hot-toast'
-import store from '../store/index'
+import { login as loginHandle, logout as logoutHandle } from '@/store/auth'
+import store from '@/store'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -34,7 +35,6 @@ export const logout = async () => {
     toast.error(error.message)
   }
 }
-
 onAuthStateChanged(auth, (user) => {
   if (user) {
     store.dispatch(loginHandle(user))

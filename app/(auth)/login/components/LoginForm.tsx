@@ -8,9 +8,11 @@ import { Input } from '@/components/ui/input'
 import { login } from '@/app/firebase'
 import { useRouter } from 'next/navigation'
 import { login as LoginHandle } from '@/store/auth'
+import { useDispatch } from 'react-redux'
 import LoginWithGoogleButton from '@/components/GoogleAuth'
 
 export const LoginForm = () => {
+  const dispatch = useDispatch()
   const router = useRouter()
   const [data, setData] = useState({
     email: '',
@@ -27,7 +29,7 @@ export const LoginForm = () => {
   const onSubmit = async (e: any) => {
     e.preventDefault()
     const user = await login(data.email, data.password)
-    /* dispatch(LoginHandle(user)) */
+    dispatch(LoginHandle(user))
     if (user) router.push('/')
   }
 
