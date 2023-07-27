@@ -11,11 +11,12 @@ export type InputWithLabelProps = {
 }
 export type ButtonWithIconProps = {
   text: string
-  size: number
+  size?: number
   variant: string
-  onClick: MouseEventHandler<HTMLButtonElement>
+  onClick?: MouseEventHandler<HTMLButtonElement>
   className?: any
   children?: React.ReactNode
+  props?: any
 }
 export type InputWithButtonProps = {
   className?: string
@@ -42,4 +43,5 @@ export type JobsItemProps = {
 export type InputFileProps = {
   label: string
   className?: string
+  onFileChange: any
 }

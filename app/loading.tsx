@@ -6,7 +6,7 @@ import React from 'react'
 const Loading = () => {
   return (
     <div className="flex h-fit-screen items-center justify-center">
-      <Loader className="h-6 w-6 animate-spin text-gray-400" />
+      <Loader className="h-6 w-6 animate-spin text-foreground" />
     </div>
   )
 }

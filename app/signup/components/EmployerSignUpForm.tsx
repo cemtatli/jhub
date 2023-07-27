@@ -1,8 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import React from 'react'
-import LoginWithGoogleButton from '@/app/firebase/google-auth'
+import React, { useState } from 'react'
 import { Divider } from '@/components/shared/Divider'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -11,13 +10,16 @@ import { useRouter } from 'next/navigation'
 import { toast } from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { employerRegisterSchema } from '@/validations/register-schema'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { auth } from '@/app/firebase'
 import { Label } from '@/components/ui/label'
+import { InputFile } from '@/components/shared/InputFile'
+import { employerRegisterSchema } from '@/validations'
+import LoginWithGoogleButton from '@/components/GoogleAuth'
 
 export const EmployerSignUpForm = () => {
   const router = useRouter()
+  const [uploadedImage, setUploadedImage] = useState(null)
 
   const {
     handleSubmit,
@@ -32,6 +34,9 @@ export const EmployerSignUpForm = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password)
       const user = userCredential.user
       if (user) {
+        if (uploadedImage) {
+          await updateProfile(user, { photoURL: uploadedImage })
+        }
         toast.success(`${data.company_name} successfully registered`)
         router.push('/')
       }
@@ -40,23 +45,26 @@ export const EmployerSignUpForm = () => {
       toast.error(error.message)
     }
   }
+
   return (
     <div className="mt-8 flex w-full max-w-lg flex-col gap-5 ">
       <form onSubmit={handleSubmit(onSubmit)} className="flex w-full max-w-lg flex-col gap-5">
         <div className="grid w-full items-center gap-1.5">
+          <Label>Company Name </Label>
           <Input
             {...register('company_name')}
-            placeholder={'Company Name'}
             id="company_name"
             type="text"
+            placeholder="Company Name"
             className={`${errors.company_name ? 'error' : ''}`}
           />
           {errors.company_name && <small>{errors.company_name.message}</small>}
         </div>
         <div className="grid w-full items-center gap-1.5">
+          <Label>Email</Label>
           <Input
+            placeholder="Email"
             {...register('email')}
-            placeholder={'E-mail'}
             id="email"
             type="email"
             className={`${errors.company_name ? 'error' : ''}`}
@@ -64,9 +72,25 @@ export const EmployerSignUpForm = () => {
           {errors.email && <small>{errors.email.message}</small>}
         </div>
         <div className="grid w-full items-center gap-1.5">
-          <Input {...register('password')} type="password" placeholder="Password" />
+          <Label>Password</Label>
+          <Input
+            {...register('password')}
+            type="password"
+            placeholder="Password"
+            className={`${errors.company_name ? 'error' : ''}`}
+          />
           {errors.password && <small>{errors.password.message}</small>}
         </div>
+        <div className="grid w-full items-center gap-1.5">
+          <Label>
+            Company Logo <span className="text-xs text-primary">(Optional)</span>
+          </Label>
+          <InputFile
+            label="Upload"
+            onFileChange={(file: any) => setUploadedImage(file)} // Yüklenen resmi URL dizesi olarak atıyoruz.
+          />
+        </div>
+
         <div className="items-top flex flex-col gap-2">
           <div className="flex w-full items-center gap-x-2">
             <input type="checkbox" id="privacy" {...register('privacy')} className="accent-foreground " />

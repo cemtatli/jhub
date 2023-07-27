@@ -2,11 +2,12 @@
 
 import { useState } from 'react'
 import { signInWithPopup } from 'firebase/auth'
-import { auth } from '../firebase'
+
 import { GoogleAuthProvider } from 'firebase/auth'
 import { useRouter } from 'next/navigation'
 import { ButtonWithIcon } from '@/components/shared/ButtonWithIcon'
 import { toast } from 'react-hot-toast'
+import { auth } from '@/app/firebase'
 
 const provider = new GoogleAuthProvider()
 

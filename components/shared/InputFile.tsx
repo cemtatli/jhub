@@ -5,11 +5,22 @@ import { InputFileProps } from '@/types'
 import { UploadCloud } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-export function InputFile({ label, className, ...props }: InputFileProps) {
+export function InputFile({ label, className, onFileChange, ...props }: InputFileProps) {
   const [fileUploaded, setFileUploaded] = useState(false)
+  const [uploadedImageUrl, setUploadedImageUrl] = useState('')
 
   const handleFileChange = (e: any) => {
-    e.target.files.length > 0 ? setFileUploaded(true) : setFileUploaded(false)
+    const file = e.target.files[0]
+    if (file) {
+      setFileUploaded(true)
+      const imageUrl = URL.createObjectURL(file)
+      setUploadedImageUrl(imageUrl)
+      onFileChange(file) // Resmi EmployerSignUpForm bileşenine iletiyoruz.
+    } else {
+      setFileUploaded(false)
+      setUploadedImageUrl('')
+      onFileChange(null) // Resmi EmployerSignUpForm bileşenine boş olarak iletiyoruz.
+    }
   }
 
   return (
@@ -21,7 +32,7 @@ export function InputFile({ label, className, ...props }: InputFileProps) {
           fileUploaded ? 'border-green-600 bg-green-50 text-green-600 group-hover:bg-green-50' : '',
           className,
         )}>
-        {fileUploaded ? '' : <UploadCloud className="h-5 w-5 transition-all duration-150 group-hover:scale-125" />}
+        {!fileUploaded && <UploadCloud className="h-5 w-5 transition-all duration-150 group-hover:scale-125" />}
         {fileUploaded ? 'Successfully uploaded!' : label}
       </Label>
       <Input {...props} id="picture" className="hidden" type="file" onChange={handleFileChange} />

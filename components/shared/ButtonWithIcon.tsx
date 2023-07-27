@@ -3,14 +3,7 @@ import { Button } from '@/components/ui/button'
 import { BackIcon, GitHubIcon, GoogleIcon, LoadingIcon } from '@/components/ui/icons'
 import { ButtonWithIconProps } from '@/types'
 
-function ButtonWithIcon({
-  size = 24,
-  text,
-  variant,
-  className,
-  children,
-  onClick,
-}: ButtonWithIconProps) {
+function ButtonWithIcon({ size = 24, text, variant, className, children, onClick, props }: ButtonWithIconProps) {
   let selectedIcon = null
   switch (variant) {
     case 'google':
@@ -31,6 +24,7 @@ function ButtonWithIcon({
 
   return (
     <Button
+      {...props}
       onClick={onClick}
       className={cn(
         'transition-all hover:bg-red-500',

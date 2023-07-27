@@ -4,12 +4,11 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { Divider } from '@/components/shared/Divider'
 import { Button } from '@/components/ui/button'
-import LoginWithGoogleButton from '@/app/firebase/google-auth'
 import { Input } from '@/components/ui/input'
-import { toast } from 'react-hot-toast'
-import { signInWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '@/app/firebase'
+import { login } from '@/app/firebase'
 import { useRouter } from 'next/navigation'
+import { login as LoginHandle } from '@/store/auth'
+import LoginWithGoogleButton from '@/components/GoogleAuth'
 
 export const LoginForm = () => {
   const router = useRouter()
@@ -24,20 +23,12 @@ export const LoginForm = () => {
       [e.target.name]: e.target.value,
     })
   }
+
   const onSubmit = async (e: any) => {
     e.preventDefault()
-    try {
-      const userCredential = await signInWithEmailAndPassword(auth, data.email, data.password)
-      const user = userCredential.user
-      if (user) {
-        toast.success(`Welcome Back ${user.displayName}`)
-        router.push('/')
-        console.log(user)
-      }
-    } catch (error) {
-      console.error(error)
-      toast.error('Invalid email or password. Please try again.')
-    }
+    const user = await login(data.email, data.password)
+    /* dispatch(LoginHandle(user)) */
+    if (user) router.push('/')
   }
 
   return (
@@ -52,7 +43,9 @@ export const LoginForm = () => {
           id="password"
           type="password"
         />
-        <Button type="submit">Log in</Button>
+        <Button disabled={!data.email || !data.password} className="disabled:opacity-80" type="submit">
+          Log in
+        </Button>
       </form>
       <Divider label="or" />
       <LoginWithGoogleButton />

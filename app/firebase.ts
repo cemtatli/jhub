@@ -1,5 +1,8 @@
+import { login as loginHandle, logout as logoutHandle } from '@/store/auth'
 import { initializeApp } from 'firebase/app'
-import { getAuth } from 'firebase/auth'
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
+import { toast } from 'react-hot-toast'
+import store from '../store/index'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -9,6 +12,33 @@ const firebaseConfig = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 }
-
 export const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app)
+
+export const login = async (email: string, password: string) => {
+  try {
+    const { user } = await signInWithEmailAndPassword(auth, email, password)
+    if (user) {
+      toast.success(`Welcome Back ${user.displayName}`)
+    }
+    return user
+  } catch (error: any) {
+    toast.error(error.message)
+  }
+}
+export const logout = async () => {
+  try {
+    await signOut(auth)
+    return true
+  } catch (error: any) {
+    toast.error(error.message)
+  }
+}
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    store.dispatch(loginHandle(user))
+  } else {
+    store.dispatch(logoutHandle())
+  }
+})

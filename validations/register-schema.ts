@@ -31,3 +31,4 @@ export const employerRegisterSchema = yup.object().shape({
     .required('Password field is required.'),
   privacy: yup.boolean().oneOf([true], 'Please check the box to proceed.').required('The box is required.'),
 })
+

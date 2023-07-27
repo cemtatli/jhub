@@ -11,12 +11,12 @@ import { Label } from '@/components/ui/label'
 
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { auth } from '@/app/firebase'
-import LoginWithGoogleButton from '@/app/firebase/google-auth'
 
 import { toast } from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { userRegisterSchema } from '@/validations/register-schema'
+import LoginWithGoogleButton from '@/components/GoogleAuth'
 
 export const UserSignUpForm = () => {
   const router = useRouter()
