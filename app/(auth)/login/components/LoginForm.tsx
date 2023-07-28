@@ -2,9 +2,11 @@
 
 import Link from 'next/link'
 import React, { useState } from 'react'
+
 import { Divider } from '@/components/shared/Divider'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+
 import { login } from '@/app/firebase'
 import { useRouter } from 'next/navigation'
 import { login as LoginHandle } from '@/store/auth'
@@ -45,7 +47,7 @@ export const LoginForm = () => {
           id="password"
           type="password"
         />
-        <Button disabled={!data.email || !data.password} className="disabled:opacity-80" type="submit">
+        <Button disabled={!data.email || !data.password} className="disabled:opacity-75" type="submit">
           Log in
         </Button>
       </form>

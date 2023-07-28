@@ -15,7 +15,7 @@ import { auth } from '@/app/firebase'
 import { toast } from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { userRegisterSchema } from '@/validations/register-schema'
+import { userRegisterSchema } from '@/validations'
 import LoginWithGoogleButton from '@/components/GoogleAuth'
 
 export const UserSignUpForm = () => {

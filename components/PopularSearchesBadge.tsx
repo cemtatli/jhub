@@ -1,6 +1,6 @@
 import React from 'react'
 import { Badge } from '@/components/ui/badge'
-import { popularSearchs } from '@/api/populer-search'
+import { popularSearchs } from '@/mocks/populer-search'
 
 export const PopularSearchesBadge = () => {
   return (
