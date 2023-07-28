@@ -81,7 +81,7 @@ export const EmployerSignUpForm = () => {
           />
           {errors.password && <small>{errors.password.message}</small>}
         </div>
-        <div className="grid w-full items-center gap-1.5">
+        {/*         <div className="grid w-full items-center gap-1.5">
           <Label>
             Company Logo <span className="text-xs text-primary">(Optional)</span>
           </Label>
@@ -89,8 +89,7 @@ export const EmployerSignUpForm = () => {
             label="Upload"
             onFileChange={(file: any) => setUploadedImage(file)} // Yüklenen resmi URL dizesi olarak atıyoruz.
           />
-        </div>
-
+        </div> */}
         <div className="items-top flex flex-col gap-2">
           <div className="flex w-full items-center gap-x-2">
             <input type="checkbox" id="privacy" {...register('privacy')} className="accent-foreground " />

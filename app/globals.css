@@ -73,19 +73,15 @@
 @layer base {
   * {
     @apply scroll-smooth border-border antialiased;
-    -webkit-text-size-adjust: 100%;
   }
   body {
-    @apply bg-background text-base text-foreground;
-  }
-  #__next {
-    @apply min-h-dynamic-screen;
+    @apply bg-background text-base text-zinc-800;
   }
 }
 
 @layer components {
   .error {
-    @apply border-red-500 !ring-red-500;
+    @apply border-red-500 !ring-red-400;
   }
   small {
     @apply mt-1 leading-none text-red-500;

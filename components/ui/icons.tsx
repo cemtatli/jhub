@@ -1,4 +1,4 @@
-const GitHubIcon = ({ size = 22, ...props }) => {
+const GitHubIcon = ({ size = 24, ...props }) => {
   return (
     <svg
       {...props}
@@ -15,20 +15,14 @@ const GitHubIcon = ({ size = 22, ...props }) => {
     </svg>
   )
 }
-const GoogleIcon = ({ size = 22, ...props }) => {
+const GoogleIcon = ({ size = 24, ...props }) => {
   return (
-    <svg
-      {...props}
-      viewBox="0 0 24 24"
-      width={size}
-      height={size}
-      fill="currentColor"
-      className="mr-2">
+    <svg {...props} viewBox="0 0 24 24" width={size} height={size} fill="currentColor" className="mr-2">
       <path d="M22.2 10.4l-0.1-0.5H12.3v4.2H18.1c-0.6 2.9-3.4 4.4-5.7 4.4-1.7 0-3.4-0.7-4.6-1.9a6.6 6.6 0 0 1-1.9-4.6c0-1.7 0.8-3.5 1.9-4.6s2.9-1.8 4.6-1.8c2 0 3.4 1 3.8 1.5l3-2.9C18.3 3.4 16 1.5 12.3 1.5c-2.8 0-5.6 1.1-7.6 3.1C2.7 6.5 1.7 9.4 1.7 12s1 5.3 2.9 7.3c2 2.1 4.9 3.2 7.9 3.2 2.7 0 5.3-1.1 7.1-3 1.8-1.9 2.7-4.5 2.7-7.2 0-1.2-0.1-1.8-0.1-1.9z" />
     </svg>
   )
 }
-const BackIcon = ({ size = 22, ...props }) => {
+const BackIcon = ({ size = 24, ...props }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +41,7 @@ const BackIcon = ({ size = 22, ...props }) => {
     </svg>
   )
 }
-const LoadingIcon = ({ size = 22, ...props }) => {
+const LoadingIcon = ({ size = 24, ...props }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -74,13 +68,7 @@ const LoadingIcon = ({ size = 22, ...props }) => {
 }
 const NotFoundIcon = ({ ...props }) => {
   return (
-    <svg
-      {...props}
-      width="180"
-      height="97"
-      viewBox="0 0 180 97"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} width="180" height="97" viewBox="0 0 180 97" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect data-v-5ea6dcaf="" y="33" width="180" height="64" rx="8" fill="#FFFBEB" />
       <path
         opacity="0.1"

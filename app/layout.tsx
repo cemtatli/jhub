@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
-import { Header } from '@/components/Header'
+import { Header } from '@/components/header'
 import { MainLayout } from '@/components/layout'
 import { Providers } from '@/store/redux/provider'
 
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   robots: 'index, follow',
 }
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Inter({ subsets: ['latin'] })
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <Providers>
       <html lang="en">
-        <body className={inter.className}>
+        <body className={font.className}>
           <Header />
           <MainLayout>{children}</MainLayout>
           <Toaster position="top-center" reverseOrder={true} />

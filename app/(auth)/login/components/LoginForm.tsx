@@ -47,7 +47,10 @@ export const LoginForm = () => {
           id="password"
           type="password"
         />
-        <Button disabled={!data.email || !data.password} className="disabled:opacity-75" type="submit">
+        <Button
+          disabled={!data.email || !data.password}
+          className="disabled:cursor-not-allowed disabled:opacity-75"
+          type="submit">
           Log in
         </Button>
       </form>

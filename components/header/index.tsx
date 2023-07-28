@@ -6,8 +6,7 @@ import Link from 'next/link'
 import { Logo } from '@/components/shared/Logo'
 import { Button } from '@/components/ui/button'
 import { JobsBadge } from '@/components/NewJobBadge'
-import { MenuIcon } from 'lucide-react'
-import { logout } from '@/app/firebase'
+import { MobileMenu } from '@/components/header/mobile-menu'
 
 export const Header = () => {
   return (
@@ -24,7 +23,7 @@ export const Header = () => {
           </Button>
         </nav>
         <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-gray-50 transition-colors hover:bg-gray-100 md:hidden">
-          <MenuIcon size={24} />
+          <MobileMenu />
         </div>
       </div>
     </header>
