@@ -9,7 +9,7 @@ const NotFound = () => {
       <NotFoundIcon />
       <span className="text-center text-lg font-medium">The page you are looking for was not found.</span>
       <Link href={'/'}>
-        <ButtonWithIcon variant="" text="Back to homepage" className="mt-2.5" />
+        <ButtonWithIcon variant="back" text="Back to homepage" className="mt-2.5" />
       </Link>
     </div>
   )

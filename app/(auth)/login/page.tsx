@@ -14,10 +14,9 @@ const Login = () => {
         <div className="relative h-full w-full">
           <Image
             fill
-            quality={100}
             loading="lazy"
             className="h-full overflow-hidden rounded object-cover"
-            alt="sign-up-photo"
+            alt="Login"
             src="https://images.pexels.com/photos/140945/pexels-photo-140945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           />
         </div>

@@ -15,7 +15,6 @@ export type ButtonWithIconProps = {
   variant: string
   onClick?: MouseEventHandler<HTMLButtonElement>
   className?: any
-  children?: React.ReactNode
   props?: any
 }
 export type InputWithButtonProps = {
