@@ -13,13 +13,12 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { auth } from '@/app/firebase'
 import { Label } from '@/components/ui/label'
-import { InputFile } from '@/components/shared/InputFile'
+
 import { employerRegisterSchema } from '@/validations'
 import LoginWithGoogleButton from '@/components/GoogleAuth'
 
 export const EmployerSignUpForm = () => {
   const router = useRouter()
-  const [uploadedImage, setUploadedImage] = useState(null)
 
   const {
     handleSubmit,
@@ -33,13 +32,7 @@ export const EmployerSignUpForm = () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password)
       const user = userCredential.user
-      if (user) {
-        if (uploadedImage) {
-          await updateProfile(user, { photoURL: uploadedImage })
-        }
-        toast.success(`${data.company_name} successfully registered`)
-        router.push('/')
-      }
+      if (user) router.push('/')
     } catch (error: any) {
       console.error(error)
       toast.error(error.message)
@@ -81,15 +74,6 @@ export const EmployerSignUpForm = () => {
           />
           {errors.password && <small>{errors.password.message}</small>}
         </div>
-        {/*         <div className="grid w-full items-center gap-1.5">
-          <Label>
-            Company Logo <span className="text-xs text-primary">(Optional)</span>
-          </Label>
-          <InputFile
-            label="Upload"
-            onFileChange={(file: any) => setUploadedImage(file)} // Yüklenen resmi URL dizesi olarak atıyoruz.
-          />
-        </div> */}
         <div className="items-top flex flex-col gap-2">
           <div className="flex w-full items-center gap-x-2">
             <input type="checkbox" id="privacy" {...register('privacy')} className="accent-foreground " />

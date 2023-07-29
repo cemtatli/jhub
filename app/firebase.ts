@@ -1,9 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
-
 import { toast } from 'react-hot-toast'
-import { logIn, logOut } from '@/app/redux/features/authSlice'
-import store from '@/app/redux/store'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -38,10 +35,11 @@ export const logout = async () => {
 export const signup = async () => {
   //
 }
-/* onAuthStateChanged(auth, (user) => {
+
+export const isAuth = onAuthStateChanged(auth, (user) => {
   if (user) {
-    store.dispatch(logIn(user))
+    return true
   } else {
-    store.dispatch(logOut())
+    return false
   }
-}) */
+})
