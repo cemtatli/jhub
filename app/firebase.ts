@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app'
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 
 import { toast } from 'react-hot-toast'
-import { login as loginHandle, logout as logoutHandle } from '@/app/redux/features/authSlice'
+import { logIn, logOut } from '@/app/redux/features/authSlice'
 import store from '@/app/redux/store'
 
 const firebaseConfig = {
@@ -35,10 +35,13 @@ export const logout = async () => {
     toast.error(error.message)
   }
 }
-onAuthStateChanged(auth, (user) => {
+export const signup = async () => {
+  //
+}
+/* onAuthStateChanged(auth, (user) => {
   if (user) {
-    store.dispatch(loginHandle(user))
+    store.dispatch(logIn(user))
   } else {
-    store.dispatch(logoutHandle())
+    store.dispatch(logOut())
   }
-})
+}) */
