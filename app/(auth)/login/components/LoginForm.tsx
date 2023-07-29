@@ -9,13 +9,15 @@ import { Input } from '@/components/ui/input'
 
 import { login } from '@/app/firebase'
 import { useRouter } from 'next/navigation'
-import { login as LoginHandle } from '@/store/auth'
-import { useDispatch } from 'react-redux'
+import { logIn as loginHandle } from '@/app/redux/features/authSlice'
 import LoginWithGoogleButton from '@/components/GoogleAuth'
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from '@/app/redux/store'
 
 export const LoginForm = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch<AppDispatch>()
   const router = useRouter()
+
   const [data, setData] = useState({
     email: '',
     password: '',
@@ -31,8 +33,9 @@ export const LoginForm = () => {
   const onSubmit = async (e: any) => {
     e.preventDefault()
     const user = await login(data.email, data.password)
-    dispatch(LoginHandle(user))
+    dispatch(loginHandle(data.email))
     if (user) router.push('/')
+    console.log(user)
   }
 
   return (
@@ -47,12 +50,7 @@ export const LoginForm = () => {
           id="password"
           type="password"
         />
-        <Button
-          disabled={!data.email || !data.password}
-          className="disabled:cursor-not-allowed disabled:opacity-75"
-          type="submit">
-          Log in
-        </Button>
+        <Button type="submit">Log in</Button>
       </form>
       <Divider label="or" />
       <LoginWithGoogleButton />

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
 import { Divider } from '@/components/shared/Divider'
+import LoginWithGoogleButton from '@/components/GoogleAuth'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -16,7 +17,6 @@ import { toast } from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { userRegisterSchema } from '@/validations'
-import LoginWithGoogleButton from '@/components/GoogleAuth'
 
 export const UserSignUpForm = () => {
   const router = useRouter()
@@ -40,7 +40,6 @@ export const UserSignUpForm = () => {
         router.push('/')
       }
     } catch (error: any) {
-      console.error(error)
       toast.error(error.message)
     }
   }

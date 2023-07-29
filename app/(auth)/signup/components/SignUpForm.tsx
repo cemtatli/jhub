@@ -6,7 +6,7 @@ import { EmployerSignUpForm } from './EmployerSignUpForm'
 
 export const SignUpForm = () => {
   return (
-    <Tabs defaultValue="user" className="min-h-[675px] w-full max-w-lg">
+    <Tabs defaultValue="user" className="h-full max-h-[585px] w-full max-w-lg">
       <TabsList>
         <TabsTrigger value="user">User</TabsTrigger>
         <TabsTrigger value="employer">Employer</TabsTrigger>

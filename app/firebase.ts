@@ -2,8 +2,8 @@ import { initializeApp } from 'firebase/app'
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 
 import { toast } from 'react-hot-toast'
-import { login as loginHandle, logout as logoutHandle } from '@/store/auth'
-import store from '@/store'
+import { login as loginHandle, logout as logoutHandle } from '@/app/redux/features/authSlice'
+import store from '@/app/redux/store'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,

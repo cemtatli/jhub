@@ -20,7 +20,7 @@ const SignUp = () => {
           />
         </div>
       </div>
-      <div className="flex w-full flex-col items-center justify-center xl:items-end ">
+      <div className=" flex h-full w-full flex-col items-center justify-center xl:items-end">
         <SignUpForm />
       </div>
     </section>

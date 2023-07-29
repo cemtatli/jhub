@@ -1,20 +1,24 @@
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet'
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import Link from 'next/link'
 import { MenuIcon } from 'lucide-react'
 import { Logo } from '@/components/shared/Logo'
 import { Divider } from '@/components/shared/Divider'
 import { Button } from '@/components/ui/button'
-import { JobsBadge } from '@/components/NewJobBadge'
+import { AppDispatch, useAppSelector } from '@/app/redux/store'
+import { useDispatch } from 'react-redux'
+import { logOut } from '@/app/redux/features/authSlice'
+import { useRouter } from 'next/navigation'
 
 export const MobileMenu = () => {
+  const router = useRouter()
+  const isAuth = useAppSelector((state) => state.auth.value.isAuth)
+  const dispatch = useDispatch<AppDispatch>()
+
+  const handleLogout = () => {
+    dispatch(logOut())
+    router.push('/')
+  }
+
   return (
     <Sheet>
       <SheetTrigger>
@@ -26,22 +30,30 @@ export const MobileMenu = () => {
             <Logo />
             <Divider label="" className="mt-5" />
           </SheetTitle>
-          <SheetDescription>
-            <nav className="grid gap-2.5">
+          <div className="grid gap-2.5">
+            {isAuth ? (
               <SheetClose asChild>
-                <Link href={'/login'}>
-                  <Button variant={'outline'} className="w-full">
-                    Log in
-                  </Button>
-                </Link>
+                <Button variant={'outline'} className="w-full" onClick={handleLogout}>
+                  Log out
+                </Button>
               </SheetClose>
-              <SheetClose asChild>
-                <Link href={'/signup'}>
-                  <Button className="w-full">Sign up</Button>
-                </Link>
-              </SheetClose>
-            </nav>
-          </SheetDescription>
+            ) : (
+              <>
+                <SheetClose asChild>
+                  <Link href={'/login'}>
+                    <Button variant={'outline'} className="w-full">
+                      Log in
+                    </Button>
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link href={'/signup'}>
+                    <Button className="w-full">Sign up</Button>
+                  </Link>
+                </SheetClose>
+              </>
+            )}
+          </div>
         </SheetHeader>
       </SheetContent>
     </Sheet>
