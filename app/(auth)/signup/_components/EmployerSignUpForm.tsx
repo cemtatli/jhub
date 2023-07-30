@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation'
 import { toast } from 'react-hot-toast'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '@/app/firebase'
 import { Label } from '@/components/ui/label'
 

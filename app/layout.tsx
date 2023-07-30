@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 import { Header } from '@/components/header'
-import { MainLayout } from '@/components/layout'
+import { Wrapper } from '@/components/layout'
 
 export const metadata: Metadata = {
   title: 'JHubs — find your dream job',
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={font.className}>
         <Header />
-        <MainLayout>{children}</MainLayout>
+        <Wrapper>{children}</Wrapper>
         <Toaster position="top-center" reverseOrder={true} />
       </body>
     </html>
