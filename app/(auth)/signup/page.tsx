@@ -1,5 +1,5 @@
 import React from 'react'
-import { SignUpForm } from './components/SignUpForm'
+import { SignUpForm } from './_components/SignUpForm'
 import { Metadata } from 'next'
 import Image from 'next/image'
 export const metadata: Metadata = {

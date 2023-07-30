@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 import { Header } from '@/components/header'
 import { MainLayout } from '@/components/layout'
-import { ReduxProviders } from '@/app/redux/features/provider'
 
 export const metadata: Metadata = {
   title: 'JHubs — find your dream job',
@@ -22,11 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={font.className}>
-        <ReduxProviders>
-          <Header />
-          <MainLayout>{children}</MainLayout>
-          <Toaster position="top-center" reverseOrder={true} />
-        </ReduxProviders>
+        <Header />
+        <MainLayout>{children}</MainLayout>
+        <Toaster position="top-center" reverseOrder={true} />
       </body>
     </html>
   )
