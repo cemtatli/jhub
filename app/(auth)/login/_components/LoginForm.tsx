@@ -45,6 +45,7 @@ export const LoginForm = () => {
           placeholder="Password"
           id="password"
           type="password"
+          className='pr-8'
         />
         <Button type="submit">Log in</Button>
       </form>

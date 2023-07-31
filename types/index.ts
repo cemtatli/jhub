@@ -21,6 +21,7 @@ export type InputWithButtonProps = {
   className?: string
   type?: string
   label?: string
+
 }
 export type CheckboxWithTextProps = {
   id?: string

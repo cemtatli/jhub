@@ -4,6 +4,7 @@ import { MenuIcon } from 'lucide-react'
 import { Logo } from '@/components/shared/Logo'
 import { Divider } from '@/components/shared/Divider'
 import { Button } from '@/components/ui/button'
+import { JobsBadge } from '@/components/JobBadge'
 
 export const MobileMenu = () => {
   return (

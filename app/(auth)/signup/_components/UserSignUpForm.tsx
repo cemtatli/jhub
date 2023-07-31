@@ -91,7 +91,7 @@ export const UserSignUpForm = () => {
             id="password"
             type="password"
             placeholder="Password"
-            className={`${errors.name ? 'error' : ''}`}
+            className={`${errors.name ? 'error' : ''} pr-8`}
           />
           {errors.password && <small>{errors.password.message}</small>}
         </div>

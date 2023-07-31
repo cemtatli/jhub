@@ -1,15 +1,29 @@
-import { cn } from '@/lib/utils'
-import { InputWithButtonProps } from '@/types'
-import { Search } from 'lucide-react'
-import { Input } from '@/components/ui/input'
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 
-export function InputWithButton({ className, type = 'text', label }: InputWithButtonProps) {
+type InputWithButtonProps = {
+  className?: string;
+  type?: string;
+  label?: string;
+  value: string;
+  onChange?: (newValue: string) => void;
+};
+
+export function InputWithButton({ className, type = 'text', label, value, onChange }: InputWithButtonProps) {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (onChange) {
+      onChange(event.target.value);
+    }
+  };
+
   return (
-    <div className={cn('relative flex max-w-full items-center', className)}>
-      <Input type={type} placeholder={label} className="h-12 rounded-full px-5 pl-14" />
-      <span className="absolute left-2 top-1/2 flex h-9 w-9 -translate-y-1/2 transform items-center justify-center rounded-full bg-muted-foreground/10">
-        <Search size={20} className="text-muted-foreground" />
+    <div className={cn('relative w-full', className)}>
+      <Input onChange={handleChange} value={value} type={type} placeholder={label} className='h-14 rounded-full flex-1 w-full pr-28 pl-14' />
+      <span className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full bg-muted-foreground/10">
+        <Search size={22} className="text-muted-foreground" />
       </span>
-    </div>
-  )
+    </div >
+  );
 }

@@ -70,7 +70,7 @@ export const EmployerSignUpForm = () => {
             {...register('password')}
             type="password"
             placeholder="Password"
-            className={`${errors.company_name ? 'error' : ''}`}
+            className={`${errors.company_name ? 'error' : ''} pr-8`}
           />
           {errors.password && <small>{errors.password.message}</small>}
         </div>

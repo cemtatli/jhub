@@ -5,22 +5,23 @@ import Link from 'next/link'
 
 import { Logo } from '@/components/shared/Logo'
 import { Button } from '@/components/ui/button'
-import { JobsBadge } from '@/components/NewJobBadge'
+import { JobsBadge } from '@/components/JobBadge'
 import { MobileMenu } from '@/components/header/mobile-menu'
+
 
 export const Header = () => {
   return (
     <header className="sticky top-0 flex h-16 items-center justify-center border-b border-gray-200 bg-white md:h-24">
       <div className="container flex items-center justify-between xl:px-0">
         <Logo />
-        <JobsBadge />
+
+        <JobsBadge className="hidden sm:block" />
         <nav className="hidden space-x-2.5 md:flex">
           <Link href={'/login'}>
             <Button variant={'ghost'} className="w-full">
               Log in
             </Button>
           </Link>
-
           <Link href={'/signup'}>
             <Button className="w-full">Sign up</Button>
           </Link>
