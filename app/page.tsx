@@ -1,12 +1,16 @@
-import { Slider } from '@/components/Slider'
+import { Slider } from '@/components/slider'
 import { PopularSearches } from '@/components/populer-search'
+import Footer from '@/components/footer'
+import AccordionMenu from '@/components/accordion'
 
 
 export default function Home() {
   return (
-    <section className='flex flex-col gap-12 mt-12'>
+    <>
       <PopularSearches />
       <Slider />
-    </section>
+      <AccordionMenu />
+      <Footer />
+    </>
   )
 }

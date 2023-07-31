@@ -20,7 +20,7 @@ export function InputWithButton({ className, type = 'text', label, value, onChan
 
   return (
     <div className={cn('relative w-full', className)}>
-      <Input onChange={handleChange} value={value} type={type} placeholder={label} className='h-14 rounded-full flex-1 w-full pr-28 pl-14' />
+      <Input onChange={handleChange} value={value} type={type} placeholder={label} className={cn('h-14 font-medium rounded-full flex-1 w-full pr-28 pl-14', className)} />
       <span className="absolute left-2 top-1/2 flex h-10 w-10 -translate-y-1/2 transform items-center justify-center rounded-full bg-muted-foreground/10">
         <Search size={22} className="text-muted-foreground" />
       </span>

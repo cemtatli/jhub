@@ -16,7 +16,7 @@ export const PopularSearches = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-y-5">
+    <div className="flex flex-col items-center justify-center relative gap-y-5 mt-24">
       <span className="text-2xl font-semibold">Popular Searches</span>
       <div className='flex relative w-full max-w-screen-md'>
         <InputWithButton onChange={handleInputChange} value={selected} label={'Search'} />

@@ -1,5 +1,10 @@
 const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <main className="container h-fit-screen-mobile overflow-auto md:h-fit-screen xl:px-2">{children}</main>
+  return (
+    <main
+      className="container  overflow-auto h-full xl:px-2 flex flex-col gap-y-12 sm:gap-y-24">
+      {children}
+    </main>
+  )
 }
 
 export { Wrapper }
