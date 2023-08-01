@@ -15,6 +15,7 @@ const nextConfig = {
         hostname: 'kommunity.com',
       },
       {
+        protocol: 'https',
         hostname: 'cdn.rareblocks.xyz',
       },
     ],

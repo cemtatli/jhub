@@ -25,19 +25,19 @@ const Slider = () => {
       scrollbar={{ draggable: true }}
     >
       <SwiperSlide>
-        <Image loading='lazy' quality={'88'} fill className='aspect-square object-cover' src={'/assets/slider/slider-1.jpg'} alt='swipper-slider-photo-1' />
+        <Image priority={true} quality={'88'} fill className='aspect-square object-cover' src={'/assets/slider/slider-1.jpg'} alt='swipper-slider-photo-1' />
       </SwiperSlide>
       <SwiperSlide>
-        <Image loading='lazy' quality={'88'} fill className='aspect-square object-left-bottom md:object-center object-cover' src={'/assets/slider/slider-2.jpg'} alt='swipper-slider-photo-2' />
+        <Image priority={true} quality={'88'} fill className='aspect-square object-left-bottom md:object-center object-cover' src={'/assets/slider/slider-2.jpg'} alt='swipper-slider-photo-2' />
       </SwiperSlide>
       <SwiperSlide>
-        <Image loading='lazy' quality={'88'} fill className='aspect-square object-cover object-right md:object-left-top' src={'/assets/slider/slider-3.jpg'} alt='swipper-slider-photo-3' />
+        <Image priority={true} quality={'88'} fill className='aspect-square object-cover object-right md:object-left-top' src={'/assets/slider/slider-3.jpg'} alt='swipper-slider-photo-3' />
       </SwiperSlide>
       <SwiperSlide>
-        <Image loading='lazy' quality={'88'} fill className='aspect-square object-cover' src={'/assets/slider/slider-4.jpg'} alt='swipper-slider-photo-4' />
+        <Image priority={true} quality={'88'} fill className='aspect-square object-cover' src={'/assets/slider/slider-4.jpg'} alt='swipper-slider-photo-4' />
       </SwiperSlide>
       <SwiperSlide>
-        <Image loading='lazy' quality={'88'} fill className='aspect-square object-cover' src={'/assets/slider/slider-5.jpg'} alt='swipper-slider-photo-4' />
+        <Image priority={true} quality={'88'} fill className='aspect-square object-cover' src={'/assets/slider/slider-5.jpg'} alt='swipper-slider-photo-4' />
       </SwiperSlide>
     </Swiper>
   );
