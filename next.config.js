@@ -12,11 +12,11 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'kommunity.com',
+        hostname: 'cdn.rareblocks.xyz',
       },
       {
         protocol: 'https',
-        hostname: 'cdn.rareblocks.xyz',
+        hostname: 'i.pravatar.cc',
       },
     ],
   },

@@ -3,7 +3,7 @@ import { Logo } from '../shared/Logo'
 import Link from 'next/link'
 import { Github, Twitter } from 'lucide-react'
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer>
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 border-t">
@@ -71,4 +71,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+
