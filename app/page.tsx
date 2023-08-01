@@ -1,16 +1,35 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
 import { Slider } from '@/components/slider'
 import { PopularSearches } from '@/components/populer-search'
 import Footer from '@/components/footer'
-import AccordionMenu from '@/components/accordion'
+import Loading from './loading'
+import { Testimonial } from '@/components/testimonial'
+import Features from '@/components/features'
+
+
 
 
 export default function Home() {
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   return (
     <>
-      <PopularSearches />
-      <Slider />
-      <AccordionMenu />
-      <Footer />
+      {isClient ? <>
+        <PopularSearches />
+        <Slider />
+        <Testimonial />
+        <Features />
+
+        <Footer /></> : <>
+        <Loading />
+      </>
+      }
     </>
   )
 }
