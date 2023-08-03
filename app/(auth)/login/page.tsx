@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { LoginForm } from './_components/LoginForm'
-import { Logo } from '@/components/shared/Logo'
+import { Logo } from '@/components/ui/logo'
 import Image from 'next/image'
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Logo } from '../shared/Logo'
+import { Logo } from '../ui/logo'
 import Link from 'next/link'
 import { Github, Twitter } from 'lucide-react'
 
@@ -17,7 +17,7 @@ export const Footer = () => {
               <ul className="font-medium flex flex-col gap-4">
                 <Link href="/" className="hover:underline">Home</Link>
                 <Link href="/login" className="hover:underline">Log in</Link>
-                <Link href="signin" className="hover:underline">Sign in</Link>
+                <Link href="signup" className="hover:underline">Sign up</Link>
               </ul>
             </div>
             <div>
@@ -45,7 +45,7 @@ export const Footer = () => {
           </div>
         </div>
         <hr className="my-6 border-zinc-200 sm:mx-auto lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="sm:flex flex flex-col sm:flex-row justify-center items-center sm:items-center sm:justify-between">
           <span className="text-sm sm:text-center">© 2023 <Link href="/" className="hover:underline">Jhub</Link>. All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">

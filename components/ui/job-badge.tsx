@@ -1,12 +1,11 @@
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { ArrowIcon } from '@/components/ui/icons'
-
 import { cn } from '@/lib/utils'
 
 export const JobsBadge = ({ className }: any) => {
   const apiResponse = {
-    jobsCount: 3,
+    jobsCount: 25,
   }
 
   const jobsCount = apiResponse?.jobsCount || 0

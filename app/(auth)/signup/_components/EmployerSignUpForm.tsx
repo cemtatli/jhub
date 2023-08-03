@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { Divider } from '@/components/shared/Divider'
+import { Divider } from '@/components/ui/or'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useRouter } from 'next/navigation'
@@ -15,7 +15,7 @@ import { auth } from '@/app/firebase'
 import { Label } from '@/components/ui/label'
 
 import { employerRegisterSchema } from '@/validations'
-import LoginWithGoogleButton from '@/components/GoogleAuth'
+import LoginWithGoogleButton from '@/components/ui/google-auth'
 
 export const EmployerSignUpForm = () => {
   const router = useRouter()

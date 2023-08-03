@@ -1,10 +1,10 @@
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import Link from 'next/link'
 import { MenuIcon } from 'lucide-react'
-import { Logo } from '@/components/shared/Logo'
-import { Divider } from '@/components/shared/Divider'
+import { Logo } from '@/components/ui/logo'
+import { Divider } from '@/components/ui/or'
 import { Button } from '@/components/ui/button'
-import { JobsBadge } from '@/components/JobBadge'
+import { JobsBadge } from '@/components/ui/job-badge'
 
 export const MobileMenu = () => {
   return (
