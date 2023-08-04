@@ -15,11 +15,11 @@ export function InputFile({ label, className, onFileChange, ...props }: InputFil
       setFileUploaded(true)
       const imageUrl = URL.createObjectURL(file)
       setUploadedImageUrl(imageUrl)
-      onFileChange(file) // Resmi EmployerSignUpForm bileşenine iletiyoruz.
+      onFileChange(file)
     } else {
       setFileUploaded(false)
       setUploadedImageUrl('')
-      onFileChange(null) // Resmi EmployerSignUpForm bileşenine boş olarak iletiyoruz.
+      onFileChange(null)
     }
   }
 

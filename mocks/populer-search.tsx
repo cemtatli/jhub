@@ -2,15 +2,15 @@ import { JobsItemProps } from '@/types'
 
 export const popularSearchs: JobsItemProps[] = [
   {
-    count: '2',
+    count: '12',
     title: 'React Native & Flutter',
   },
   {
-    count: '2',
+    count: '42',
     title: 'Front-end',
   },
   {
-    count: '2',
+    count: '7',
     title: 'Full-stack',
   },
   {
@@ -18,31 +18,31 @@ export const popularSearchs: JobsItemProps[] = [
     title: 'Tester',
   },
   {
-    count: '2',
+    count: '4',
     title: 'Devops',
   },
   {
-    count: '2',
+    count: '6',
     title: 'Dijital Pazarlama Uzmanı',
   },
   {
-    count: '2',
+    count: '1',
     title: 'İK Uzmanı',
   },
   {
-    count: '2',
+    count: '1',
     title: 'Yazılım Geliştirme Uzmanı',
   },
   {
-    count: '2',
+    count: '1',
     title: 'Proje Yöneticisi',
   },
   {
-    count: '2',
+    count: '24',
     title: 'Ankara',
   },
   {
-    count: '2',
+    count: '56',
     title: 'İstanbul (Avrupa)',
   },
   {
@@ -50,7 +50,7 @@ export const popularSearchs: JobsItemProps[] = [
     title: 'İstanbul (Asya)',
   },
   {
-    count: '2',
+    count: '1',
     title: 'İzmir',
   },
 ]

@@ -70,18 +70,28 @@
   }
 }
 
+::-webkit-scrollbar {
+  @apply w-2;
+}
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-lg bg-foreground/25;
+}
+
 @layer base {
   * {
     @apply scroll-smooth border-border antialiased;
   }
   body {
-    @apply bg-background text-base text-zinc-800;
+    @apply bg-background text-base text-gray-800;
   }
 }
 
 @layer components {
   .error {
-    @apply !border-red-600 !ring-red-500/80;
+    @apply !border-red-600 !ring-red-500/70;
   }
   small {
     @apply mt-1 leading-none text-red-500;

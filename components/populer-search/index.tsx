@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState } from 'react';
-import { PopularSearchesBadge } from '@/components/populer-search/PopularSearchesBadge';
-import { InputWithButton } from '@/components/shared/InputWithButton';
+import { PopularSearchesBadge } from '@/components/populer-search/search-pill';
+import { InputWithButton } from '@/components/ui/shared/InputWithButton';
 
 
 export const PopularSearches = () => {
@@ -17,7 +17,7 @@ export const PopularSearches = () => {
 
   return (
     <div className="flex flex-col items-center justify-center relative gap-y-5 mt-16 md:mt-24">
-      <span className="text-3xl font-semibold">Popular Searches</span>
+      <h2 className="mb-5 text-4xl tracking-tighter font-medium">Popular Searches</h2>
       <div className='flex relative w-full max-w-screen-sm'>
         <InputWithButton onChange={handleInputChange} value={selected} label={'Search'} />
       </div>

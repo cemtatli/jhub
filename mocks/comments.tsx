@@ -23,5 +23,4 @@ export const comments = [
     avatar: './assets/avatars/avatar3.webp',
     message: 'Pellentesque nec leo quis neque hendrerit malesuada. Vestibulum dapibus elit in sapien posuere, quis hendrerit orci consectetur.',
   },
-
 ];
