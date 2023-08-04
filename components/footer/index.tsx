@@ -44,7 +44,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-zinc-200 sm:mx-auto lg:my-8" />
+        <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div className="sm:flex flex flex-col sm:flex-row justify-center items-center sm:items-center sm:justify-between">
           <span className="text-sm sm:text-center">© 2023 <Link href="/" className="hover:underline">Jhub</Link>. All Rights Reserved.
           </span>

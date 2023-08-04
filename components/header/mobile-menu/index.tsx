@@ -4,7 +4,6 @@ import { MenuIcon } from 'lucide-react'
 import { Logo } from '@/components/ui/logo'
 import { Divider } from '@/components/ui/or'
 import { Button } from '@/components/ui/button'
-import { JobsBadge } from '@/components/ui/job-badge'
 
 export const MobileMenu = () => {
   return (
@@ -18,7 +17,7 @@ export const MobileMenu = () => {
             <Logo />
             <Divider label="" className="mt-5" />
           </SheetTitle>
-          <div className="grid gap-2.5">
+          <nav className="grid gap-2.5">
             <SheetClose asChild>
               <Link href={'/login'}>
                 <Button variant={'outline'} className="w-full">
@@ -31,7 +30,7 @@ export const MobileMenu = () => {
                 <Button className="w-full">Sign up</Button>
               </Link>
             </SheetClose>
-          </div>
+          </nav>
         </SheetHeader>
       </SheetContent>
     </Sheet>

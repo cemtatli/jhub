@@ -17,12 +17,12 @@ export const Header = () => {
         <JobsBadge className="hidden sm:block" />
         <nav className="hidden space-x-2.5 md:flex">
           <Link href={'/login'}>
-            <Button variant={'ghost'} className="w-full">
+            <Button variant={'ghost'} >
               Log in
             </Button>
           </Link>
           <Link href={'/signup'}>
-            <Button className="w-full">Sign up</Button>
+            <Button >Sign up</Button>
           </Link>
         </nav>
         <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-gray-50 transition-colors hover:bg-gray-100 md:hidden">

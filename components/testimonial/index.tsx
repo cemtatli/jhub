@@ -6,7 +6,7 @@ export const Testimonial = () => {
     <section className="relative py-24 lg:pb-16 overflow-hidden">
       <div className="container px-4">
         <div className="relative max-w-xl text-center mx-auto mb-16">
-          <h2 className="font mb-4 text-6xl tracking-tighter">What our clients say</h2>
+          <h2 className="font mb-4 text-6xl tracking-tighter">What our users say</h2>
           <p className="text-xl tracking-tight">Whereby is the super simple way to connect over video of a apps, downloads, or long meeting links enim mi turpis.</p>
         </div>
         <div className="max-w-4xl mx-auto">

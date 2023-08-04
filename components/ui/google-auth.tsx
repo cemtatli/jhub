@@ -39,6 +39,7 @@ const LoginWithGoogleButton = () => {
 
   return (
     <ButtonWithIcon
+      
       onClick={loginWithGoogle}
       size={20}
       variant={loading ? 'loading' : 'google'}

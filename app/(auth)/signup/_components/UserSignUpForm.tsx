@@ -53,7 +53,7 @@ export const UserSignUpForm = () => {
             {...register('name')}
             id="name"
             type="text"
-            placeholder="Name"
+            placeholder="Cem"
             name="name"
             className={`${errors.name ? 'error' : ''}`}
           />
@@ -66,7 +66,7 @@ export const UserSignUpForm = () => {
             name="surname"
             id="surname"
             type="text"
-            placeholder="Surname"
+            placeholder="Tatlı"
             className={`${errors.name ? 'error' : ''}`}
           />
           {errors.surname && <small>{errors.surname.message}</small>}
@@ -78,7 +78,7 @@ export const UserSignUpForm = () => {
             id="email"
             name="email"
             type="email"
-            placeholder="Email"
+            placeholder={'user@jhub.com'}
             className={`${errors.name ? 'error' : ''}`}
           />
           {errors.email && <small>{errors.email.message}</small>}
@@ -90,14 +90,14 @@ export const UserSignUpForm = () => {
             name="password"
             id="password"
             type="password"
-            placeholder="Password"
+            placeholder="*********"
             className={`${errors.name ? 'error' : ''} pr-8`}
           />
           {errors.password && <small>{errors.password.message}</small>}
         </div>
         <div className="items-top flex flex-col gap-2">
           <div className="flex w-full items-center gap-x-2">
-            <input type="checkbox" id="privacy" {...register('privacy')} className="accent-foreground " />
+            <input type="checkbox" id="privacy" {...register('privacy')} className="accent-foreground" />
             <Label
               htmlFor="privacy"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">

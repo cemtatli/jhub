@@ -48,7 +48,7 @@ export const EmployerSignUpForm = () => {
             {...register('company_name')}
             id="company_name"
             type="text"
-            placeholder="Company Name"
+            placeholder="Jhub"
             className={`${errors.company_name ? 'error' : ''}`}
           />
           {errors.company_name && <small>{errors.company_name.message}</small>}
@@ -56,7 +56,7 @@ export const EmployerSignUpForm = () => {
         <div className="grid w-full items-center gap-1.5">
           <Label>Email</Label>
           <Input
-            placeholder="Email"
+            placeholder={'employer@jhub.com'}
             {...register('email')}
             id="email"
             type="email"
@@ -69,7 +69,7 @@ export const EmployerSignUpForm = () => {
           <Input
             {...register('password')}
             type="password"
-            placeholder="Password"
+            placeholder="********"
             className={`${errors.company_name ? 'error' : ''} pr-8`}
           />
           {errors.password && <small>{errors.password.message}</small>}

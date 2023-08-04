@@ -1,12 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   theme: {
     container: {
       center: true,
@@ -87,6 +82,9 @@ module.exports = {
         'dynamic-screen': '100dvh',
         'fit-screen': 'calc(100vh - 6rem)',
         'fit-screen-mobile': 'calc(100vh - 4rem)',
+      },
+      screens: {
+        xs: '450px',
       },
     },
   },

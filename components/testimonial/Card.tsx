@@ -31,7 +31,7 @@ const Card: FC<CardProps> = ({ src, title, comment, name }) => {
         </div>
         <p className='text-sm'>
           <span>&ldquo;</span>{''}
-          <span className="text-blue-400">@Jhub</span> {''}
+          <span className="font-semibold">@Jhub</span> {''}
           <span>{""}{comment}&rdquo;</span>
         </p>
       </div>
