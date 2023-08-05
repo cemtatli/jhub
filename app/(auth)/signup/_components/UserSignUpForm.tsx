@@ -45,7 +45,7 @@ export const UserSignUpForm = () => {
   }
 
   return (
-    <div className="mt-8 flex w-full max-w-lg flex-col gap-5">
+    <div className="mt-5 flex w-full max-w-lg flex-col gap-5">
       <form onSubmit={handleSubmit(onSubmit)} className="flex w-full max-w-lg flex-col gap-5">
         <div className="grid w-full items-center gap-1.5">
           <Label>Name </Label>
@@ -110,8 +110,8 @@ export const UserSignUpForm = () => {
       </form>
       <Divider label="or" />
       <LoginWithGoogleButton />
-      <Link href="/login" className="text-center text-sm font-medium">
-        Do you have already <span className="font-semibold underline hover:text-red-500">Account ?</span>
+      <Link href="/login" className="text-center text-sm font-medium hover:underline">
+        Do you have already Account ?
       </Link>
     </div>
   )

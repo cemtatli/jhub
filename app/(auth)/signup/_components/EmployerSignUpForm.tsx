@@ -40,7 +40,7 @@ export const EmployerSignUpForm = () => {
   }
 
   return (
-    <div className="mt-8 flex w-full max-w-lg flex-col gap-5 ">
+    <div className="mt-5 flex w-full max-w-lg flex-col gap-5 ">
       <form onSubmit={handleSubmit(onSubmit)} className="flex w-full max-w-lg flex-col gap-5">
         <div className="grid w-full items-center gap-1.5">
           <Label>Company Name </Label>

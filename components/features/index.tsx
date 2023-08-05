@@ -8,7 +8,7 @@ export const Features = () => {
     <section className="py-24 pb-12 bg-gray-100 overflow-hidden rounded-lg">
       <div className="container px-4 mx-auto flex flex-col gap-12">
         <div className="max-w-xl text-center mx-auto">
-          <h2 className="font-heading mb-5 text-6xl tracking-tighter">Boost Your Workflow with Productivity Tools</h2>
+          <h2 className="font-heading mb-5 text-6xl tracking-tighter">Explore Career Opportunities</h2>
           <p className="text-xl tracking-tight">Effortlessly streamline your tasks and enhance efficiency with our cutting-edge productivity tools. Our pre-designed sections provide a seamless layout-building experience.</p>
         </div>
         <div className="flex flex-wrap px-5">
@@ -17,8 +17,8 @@ export const Features = () => {
           <FeatureItem title='Embark on Your Jhub Journey' description='Embrace a new way of working with Jhub. Our responsive sections pave the way for a flawless layout that suits your needs.' />
         </div>
         <div className="flex flex-row justify-center mt-5">
-          <Button size={'lg'} className='py-8 text-lg tracking-tighter rounded-lg'>
-            <Link href={'/signup'}>Register Now and Uncover Your Dream Job</Link>
+          <Button className='py-6 text-base tracking-tighter rounded-lg'>
+            <Link href={'/signup'}>Register Now </Link>
           </Button>
         </div>
       </div>

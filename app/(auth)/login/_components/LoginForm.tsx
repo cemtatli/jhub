@@ -58,8 +58,8 @@ export const LoginForm = () => {
       </form>
       <Divider label="or" />
       <LoginWithGoogleButton />
-      <Link href="/signup" className="text-center text-sm font-medium">
-        Don&lsquo;t have an account? <span className="font-semibold underline hover:text-red-500 tracking-tight">Account ?</span>
+      <Link href="/signup" className="text-center text-sm font-medium hover:underline">
+        Don&lsquo;t have an account? Account ?
       </Link>
     </div>
   )

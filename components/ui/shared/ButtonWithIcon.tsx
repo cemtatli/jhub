@@ -27,8 +27,8 @@ function ButtonWithIcon({ size = 24, text, variant, className, onClick, props }:
       {...props}
       onClick={onClick}
       className={cn(
-        'transition-all hover:bg-red-500',
-        variant === 'loading' ? 'animate-pulse bg-gradient-to-l from-zinc-950 via-slate-900 to-zinc-900/80' : '',
+        'transition-all hover:bg-sky-600',
+        variant === 'loading' ? 'animate-pulse bg-gradient-to-l from-gray-950 via-sky-900 to-sky-500/80' : '',
         className,
       )}>
       {selectedIcon}
