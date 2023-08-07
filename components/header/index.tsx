@@ -15,7 +15,7 @@ export const Header = () => {
       <div className="container flex items-center justify-between xl:px-0">
         <Logo />
         <JobsBadge className="hidden sm:block" />
-        <nav className="hidden space-x-2.5 md:flex">
+        <nav className="hidden space-x-2.5 md:flex font-semibold">
           <Link href={'/login'}>
             <Button variant={'ghost'} >
               Log in

@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     name: 'cemtatli',
     url: 'https://github.com/cemtatli',
   },
-  robots: 'index, follow',
 }
 
 const font = Inter({ subsets: ['latin'] })

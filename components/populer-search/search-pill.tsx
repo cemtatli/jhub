@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
-import { popularSearchs } from '@/mocks/populer-search';
+import { popularSearchs } from '@/mocks/PopularSearch';
 
 type PopularSearchesBadgeProps = {
   onClick: (searchValue: string) => void;

@@ -12,13 +12,13 @@ export const Features = () => {
           <p className="text-xl tracking-tight">Effortlessly streamline your tasks and enhance efficiency with our cutting-edge productivity tools. Our pre-designed sections provide a seamless layout-building experience.</p>
         </div>
         <div className="flex flex-wrap px-5">
-          <FeatureItem title='Select the Perfect Tool' description='Navigate through a multitude of responsive sections to curate the ideal layout. All sections are customizable and ready to use.' />
-          <FeatureItem title='Create Your Account' description='Sign up and dive into a world of innovative features. Our intuitive interface makes account setup a breeze.' />
-          <FeatureItem title='Embark on Your Jhub Journey' description='Embrace a new way of working with Jhub. Our responsive sections pave the way for a flawless layout that suits your needs.' />
+          <FeatureItem title='Analytics Dashboard' description='Track your job applications and analyze the success rate with our comprehensive analytics dashboard.' />
+          <FeatureItem title='Job Matching Algorithm' description='Our advanced algorithm matches your skills and preferences with the perfect job opportunities.' />
+          <FeatureItem title='Chat Support' description='Embrace a new way of working with Jhub. Our responsive sections pave the way for a flawless layout that suits your needs.' />
         </div>
-        <div className="flex flex-row justify-center mt-5">
+        <div className="flex justify-center mt-2.5">
           <Button className='py-6 text-base tracking-tighter rounded-lg'>
-            <Link href={'/signup'}>Register Now </Link>
+            <Link href={'/signup'}>Register Now</Link>
           </Button>
         </div>
       </div>
