@@ -11,7 +11,7 @@ export const JobsBadge = ({ className }: any) => {
   const jobsCount = apiResponse?.jobsCount || 0
 
   return jobsCount > 0 ? (
-    <Link href="/" className={(cn('shrink-0'), className)}>
+    <Link href="/jobs" className={(cn('shrink-0'), className)}>
       <Badge className="cursor-pointer bg-muted p-1 text-foreground hover:bg-muted/20 hover:border hover:border-gray-200">
         <span className="mr-2.5 rounded-full bg-sky-200 px-3 py-1 font-medium text-sky-800 tracking-tight">New</span>
         Job Advertisements ({jobsCount})

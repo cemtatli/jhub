@@ -87,6 +87,9 @@
   body {
     @apply bg-background text-base text-gray-800;
   }
+/*   main > div {
+    @apply pt-5;
+  } */
 }
 
 @layer components {
