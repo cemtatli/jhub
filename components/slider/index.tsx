@@ -12,7 +12,7 @@ import 'swiper/css/scrollbar';
 const Slider = () => {
   return (
     <Swiper
-      className='h-96 w-full rounded-lg'
+      className='h-96 w-full rounded-lg py-24 lg:pb-1 mt-10'
       modules={[Navigation, Autoplay, A11y, Scrollbar]}
       slidesPerView={1}
       autoplay={{

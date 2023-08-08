@@ -7,7 +7,7 @@ export const Features = () => {
   return (
     <section className="py-24 pb-12 bg-gray-100 overflow-hidden rounded-lg">
       <div className="container px-4 mx-auto flex flex-col gap-12">
-        <div className="max-w-xl text-center mx-auto">
+        <div className="max-w-xl text-center mx-auto px-5 hidden sm:block">
           <h2 className="font-heading mb-5 text-6xl tracking-tighter">Explore Career Opportunities</h2>
           <p className="text-xl tracking-tight">Effortlessly streamline your tasks and enhance efficiency with our cutting-edge productivity tools. Our pre-designed sections provide a seamless layout-building experience.</p>
         </div>

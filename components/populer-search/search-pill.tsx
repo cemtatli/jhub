@@ -16,7 +16,7 @@ export const PopularSearchesBadge: React.FC<PopularSearchesBadgeProps> = ({ onCl
       {popularSearchs.map(({ title }) => (
         <Badge
           onClick={() => handleBadgeClick(title)}
-          className="w-fit !shrink-0 tracking-tight text-sm cursor-pointer p-1.5 px-3 transition-all duration-300 hover:bg-gray-100"
+          className="w-fit !shrink-0 z-10 bg-white tracking-tight text-sm cursor-pointer p-1.5 px-3 transition-all duration-300 hover:bg-gray-50"
           variant={'outline'}
           key={title}
         >
