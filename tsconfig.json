@@ -34,7 +34,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/jobs/components/SelectCity.tsx"
   ],
   "exclude": [
     "node_modules"

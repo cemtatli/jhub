@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { cities } from "@/mocks/Cities"
+
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -17,6 +17,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { ArrowDownAZ, Check } from "lucide-react"
+import { cities } from "@/mocks/Cities"
 
 const SelectCity = () => {
   const [open, setOpen] = React.useState(false)
