@@ -1,35 +1,79 @@
-import React from 'react'
-import Card from './Card'
+import React from 'react';
+import Card from './Card';
 
 export const Testimonial = () => {
   return (
     <section className="relative py-24 lg:pb-16 overflow-hidden">
-      <div className="container px-4">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]" />
+      <div className="px-4">
         <div className="relative max-w-xl text-center mx-auto mb-16">
           <h2 className="font mb-4 text-6xl tracking-tighter">What our users say</h2>
-          <p className="text-xl tracking-tight">Whereby is the super simple way to connect over video of a apps, downloads, or long meeting links enim mi turpis.</p>
+          <p className="text-xl tracking-tight">Whereby is the super simple way to connect over video of apps, downloads, or long meeting links. It has truly revolutionized our teams communication.</p>
         </div>
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-nowrap justify-center -m-3 mb-3">
-            <Card comment='Doloribus quasi exercitationem aliquid maxime ex occaecati deserunt eos quod.' name='Colin' title='Chief Web Executive' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/213.jpg' />
-            <Card comment='Dolores voluptate rem enim illo.' name='Jett' title='Administrator' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/936.jpg' />
-            <Card comment='Aspernatur ratione dicta assumenda nihil cumque velit laboriosam.' name='Isai' title='Human Usability Architect' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1015.jpg' />
-            <Card comment='Sunt optio optio in sit occaecati dicta.' name='Abbie' title='Central Solutions Designer' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/487.jpg' />
-            <Card comment='Et sed asperiores.' name='Brionna' title='Forward Creative Developer' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/417.jpg' />
+            <Card
+              comment="I absolutely love how easy it is to use Whereby. Connecting with others has never been smoother!"
+              name="Colin"
+              title="Chief Web Executive"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/213.jpg"
+            />
+            <Card
+              comment="Whereby has become an essential tool for my team. It simplifies our communication and makes remote work a breeze."
+              name="Jett"
+              title="Administrator"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/936.jpg"
+            />
+            <Card
+              comment="I can confidently say that Whereby has transformed the way we collaborate. It's intuitive and effective."
+              name="Isai"
+              title="Human Usability Architect"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1015.jpg"
+            />
+            <Card
+              comment="Using Whereby for client meetings has been a game changer. It's reliable and professional."
+              name="Abbie"
+              title="Central Solutions Designer"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/487.jpg"
+            />
+            <Card
+              comment="As a developer, I appreciate how seamless Whereby is for team discussions. It saves us time and frustration."
+              name="Brionna"
+              title="Forward Creative Developer"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/417.jpg"
+            />
           </div>
           <div className="flex flex-nowrap justify-center -m-3">
-            <Card comment='Quasi est consequatur qui delectus mollitia quia quaerat qui.' name='Carolanne' title='Dynamic Markets Analyst' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/861.jpg' />
-            <Card comment='Distinctio sunt est non quisquam consequatur voluptas commodi.' name='Mertie' title='Legacy Interactions Agent' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/883.jpg' />
-            <Card comment='Enim impedit nam corporis incidunt id possimus.' name='Ericka' title='Regional Response Manager' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1115.jpg' />
-            <Card comment='Consequatur perspiciatis sunt doloribus deleniti.' name='Thea' title='Dynamic Implementation Liaison' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/793.jpg' />
+            <Card comment="Whereby' s simplicity is unmatched. I can focus on my work instead of struggling with complicated video tools." name='Carolanne' title='Dynamic Markets Analyst' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/861.jpg' />
+            <Card comment="I used to dread virtual meetings, but Whereby has changed that. It' s user-friendly and efficient." name='Mertie' title='Legacy Interactions Agent' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/883.jpg' />
+            <Card comment="Whereby' s simplicity is unmatched. I can focus on my work instead of struggling with complicated video tools." name='Carolanne' title='Dynamic Markets Analyst' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/861.jpg' />
+            <Card comment="I used to dread virtual meetings, but Whereby has changed that. It' s user-friendly and efficient." name='Mertie' title='Legacy Interactions Agent' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/883.jpg' />
+            <Card comment="Whereby has simplified our company-wide communications. It' s a must-have tool for remote teams." name='Ericka' title='Regional Response Manager' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1115.jpg' />
+            <Card comment="Whereby has simplified our company-wide communications. It' s a must-have tool for remote teams." name='Ericka' title='Regional Response Manager' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1115.jpg' />s
           </div>
-          <div className="flex flex-nowrap justify-center -m-3 mb-3">
-            <Card comment='Culpa qui culpa minus voluptas at accusantium.' name='Christop' title='International Tactics Manager' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/664.jpg' />
-            <Card comment='Repudiandae magnam qui quos enim.' name='Alice' title='Human Markets Engineer' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/537.jpg' />
-            <Card comment='Quos accusantium ut.' name='Ashly' title='Future Branding Manager' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/262.jpg' />
+          <div className='flex flex-nowrap justify-center -m-3 mb-3'>
+            <Card
+              comment="Using Whereby for client meetings has been a game changer. It's reliable and professional."
+              name="Abbie"
+              title="Central Solutions Designer"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/487.jpg"
+            />
+            <Card
+              comment="As a developer, I appreciate how seamless Whereby is for team discussions. It saves us time and frustration."
+              name="Brionna"
+              title="Forward Creative Developer"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/417.jpg"
+            />
+            <Card
+              comment="As a developer, I appreciate how seamless Whereby is for team discussions. It saves us time and frustration."
+              name="Brionna"
+              title="Forward Creative Developer"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/417.jpg"
+            />
           </div>
         </div>
       </div>
     </section>
-  )
+
+  );
 }

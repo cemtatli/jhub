@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '../ui/button';
-import FeatureItem from './FeatureItem';
+import FeatureItem from './feature-item';
 import Link from 'next/link';
 
 export const Features = () => {

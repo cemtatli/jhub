@@ -4,53 +4,66 @@ export const popularSearchs: JobsItemProps[] = [
   {
     count: '12',
     title: 'React Native & Flutter',
+    slug: 'react-native-flutter'
   },
   {
     count: '42',
-    title: 'Front-end',
+    title: 'Front-end Developer',
+    slug: 'frontend-developer'
   },
   {
     count: '7',
-    title: 'Full-stack',
+    title: 'Full-stack Developer',
+    slug: 'fullstack'
   },
   {
     count: '2',
     title: 'Tester',
+    slug: 'tester'
   },
   {
     count: '4',
-    title: 'Devops',
+    title: 'DevOps Engineer',
+    slug: 'devops'
   },
   {
     count: '6',
-    title: 'Dijital Pazarlama Uzmanı',
+    title: 'Digital Marketing Specialist',
+    slug: 'digital-marketing-specialist'
   },
   {
     count: '1',
-    title: 'İK Uzmanı',
+    title: 'HR Specialist',
+    slug: 'hr-specialist'
   },
   {
     count: '1',
-    title: 'Yazılım Geliştirme Uzmanı',
+    title: 'Software Development Expert',
+    slug: 'software-development-expert'
   },
   {
     count: '1',
-    title: 'Proje Yöneticisi',
+    title: 'Project Manager',
+    slug: 'project-manager'
   },
   {
     count: '24',
     title: 'Ankara',
+    slug: 'ankara'
   },
   {
     count: '56',
-    title: 'İstanbul (Avrupa)',
+    title: 'Istanbul (Europe)',
+    slug: 'istanbul-europe'
   },
   {
     count: '2',
-    title: 'İstanbul (Asya)',
+    title: 'Istanbul (Asia)',
+    slug: 'istanbul-asia'
   },
   {
     count: '1',
-    title: 'İzmir',
+    title: 'Izmir',
+    slug: 'izmir'
   },
 ]

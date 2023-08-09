@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 
-import { Divider } from '@/components/ui/or'
+import { Divider } from '@/components/ui/divider'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 

@@ -6,7 +6,7 @@ import { Github, Twitter } from 'lucide-react'
 export const Footer = () => {
   return (
     <footer>
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 border-t">
+      <div className="mx-auto w-full  max-w-screen-xl p-4 py-6 lg:py-8 border-t">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Logo />

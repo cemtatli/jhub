@@ -1,5 +1,5 @@
 module.exports = {
-  printWidth: 120,
+  printWidth: 100,
   tabWidth: 2,
   useTabs: false,
   semi: false,
@@ -8,5 +8,4 @@ module.exports = {
   jsxBracketSameLine: true,
   proseWrap: 'always',
   plugins: ['prettier-plugin-tailwindcss'],
-  tailwindConfig: './tailwind.config.js',
 }

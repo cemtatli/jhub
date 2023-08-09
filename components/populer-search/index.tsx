@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import { PopularSearchesBadge } from '@/components/populer-search/search-pill';
+import { PopularSearchesBadge } from '@/components/populer-search/badge';
 import { InputWithButton } from '@/components/ui/shared/InputWithButton';
 
 

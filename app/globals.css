@@ -87,7 +87,7 @@
   body {
     @apply bg-background text-base text-gray-800;
   }
-/*   main > div {
+  /*   main > div {
     @apply pt-5;
   } */
 }

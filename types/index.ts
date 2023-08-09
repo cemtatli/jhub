@@ -21,7 +21,6 @@ export type InputWithButtonProps = {
   className?: string
   type?: string
   label?: string
-
 }
 export type CheckboxWithTextProps = {
   id?: string
@@ -36,7 +35,6 @@ export type NavigationMenuItemProps = {
 }
 export type JobsItemProps = {
   title: string
-  href?: string
   slug?: string
   count: string
 }

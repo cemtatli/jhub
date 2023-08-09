@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
-import { Divider } from '@/components/ui/or'
+import { Divider } from '@/components/ui/divider'
 import LoginWithGoogleButton from '@/components/ui/google-auth'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'

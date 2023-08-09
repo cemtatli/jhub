@@ -21,7 +21,7 @@ import { ArrowDownAZ, Check } from "lucide-react"
 const SelectCity = () => {
   const [open, setOpen] = React.useState(false)
   const [value, setValue] = React.useState("")
-
+  console.log(value)
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
