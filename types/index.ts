@@ -37,6 +37,7 @@ export type JobsItemProps = {
   title: string
   slug?: string
   count: string
+  data: string
 }
 export type InputFileProps = {
   label: string

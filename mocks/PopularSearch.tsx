@@ -4,66 +4,73 @@ export const popularSearchs: JobsItemProps[] = [
   {
     count: '12',
     title: 'React Native & Flutter',
-    slug: 'react-native-flutter'
+    slug: 'react-native-flutter',
+    data: 'react-native-flutter',
   },
   {
     count: '42',
     title: 'Front-end Developer',
-    slug: 'frontend-developer'
+    slug: 'frontend-developer',
+    data: 'frontend-developer'
   },
   {
     count: '7',
     title: 'Full-stack Developer',
-    slug: 'fullstack'
+    slug: 'fullstack',
+    data: 'full-stack developer'
   },
   {
     count: '2',
     title: 'Tester',
-    slug: 'tester'
+    slug: 'tester',
+    data: 'tester'
   },
   {
     count: '4',
     title: 'DevOps Engineer',
-    slug: 'devops'
+    slug: 'devops',
+    data: 'devops'
   },
   {
     count: '6',
     title: 'Digital Marketing Specialist',
-    slug: 'digital-marketing-specialist'
+    slug: 'digital-marketing-specialist',
+    data: 'DigitalMarketingSpecialist'
   },
   {
     count: '1',
     title: 'HR Specialist',
-    slug: 'hr-specialist'
+    slug: 'hr-specialist',
+    data: 'hrspecialist'
   },
   {
     count: '1',
     title: 'Software Development Expert',
-    slug: 'software-development-expert'
+    slug: 'software-development-expert',
+    data: 'softwaredevelopmentexpert'
   },
   {
     count: '1',
     title: 'Project Manager',
-    slug: 'project-manager'
+    slug: 'project-manager',
+    data: 'projectmanager'
   },
   {
     count: '24',
     title: 'Ankara',
-    slug: 'ankara'
+    slug: 'ankara',
+    data: 'ankara'
   },
   {
     count: '56',
-    title: 'Istanbul (Europe)',
-    slug: 'istanbul-europe'
-  },
-  {
-    count: '2',
-    title: 'Istanbul (Asia)',
-    slug: 'istanbul-asia'
+    title: 'Istanbul',
+    slug: 'istanbul-europe',
+    data: 'istanbul'
   },
   {
     count: '1',
     title: 'Izmir',
-    slug: 'izmir'
+    slug: 'izmir',
+    data: 'izmir'
   },
 ]

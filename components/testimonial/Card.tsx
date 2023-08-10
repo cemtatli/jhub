@@ -1,18 +1,29 @@
+'use client'
+
 import { FC } from 'react'
 import { TwitterIcon } from '../ui/icons'
 import Image from 'next/image'
-
+import { motion } from "framer-motion";
 interface CardProps {
   src: string
   name: string
   title: string
   comment: string
 }
+const animate = {
+  hidden: { filter: "blur(10px)", opacity: 0 },
+  visible: { filter: "blur(0px)", opacity: 1 },
+}
 
 const Card: FC<CardProps> = ({ src, title, comment, name }) => {
   return (
-    <div className="flex-shrink-0 w-96 p-4">
-      <div className="p-6 bg-white hover:bg-opacity-80 border border-gray-200 hover:border-gray-300 rounded-xl transition duration-200">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      transition={{ duration: 1.5 }}
+      variants={animate}
+      className="flex-shrink-0 w-96 p-4">
+      <div className="p-6 bg-white hover:bg-opacity-50 border border-gray-200 hover:border-gray-300 rounded-xl transition duration-200">
         <div className="flex flex-wrap justify-between -m-2 mb-4">
           <div className="w-auto p-2">
             <div className="flex flex-wrap items-center -m-1.5">
@@ -35,7 +46,7 @@ const Card: FC<CardProps> = ({ src, title, comment, name }) => {
           <span>{""}{comment}&rdquo;</span>
         </p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

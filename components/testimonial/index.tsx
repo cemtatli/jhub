@@ -20,7 +20,7 @@ export const Testimonial = () => {
             />
             <Card
               comment="Whereby has become an essential tool for my team. It simplifies our communication and makes remote work a breeze."
-              name="Jett"
+              name="Jose"
               title="Administrator"
               src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/936.jpg"
             />
@@ -65,15 +65,15 @@ export const Testimonial = () => {
               src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/417.jpg"
             />
             <Card
-              comment="As a developer, I appreciate how seamless Whereby is for team discussions. It saves us time and frustration."
-              name="Brionna"
-              title="Forward Creative Developer"
-              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/417.jpg"
+              comment="I absolutely love how easy it is to use Whereby. Connecting with others has never been smoother!"
+              name="Colin"
+              title="Chief Web Executive"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/213.jpg"
             />
           </div>
         </div>
       </div>
-    </section>
+    </section >
 
   );
 }

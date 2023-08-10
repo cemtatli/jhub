@@ -22,6 +22,7 @@ export const Features = () => {
           </Button>
         </div>
       </div>
+      
     </section>
   );
 }

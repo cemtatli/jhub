@@ -2,7 +2,7 @@ import CareerItem from './CareerItem'
 
 const Career = () => {
   return (
-    <section className="py-24 lg:pb-36 bg-gray-100 overflow-hidden rounded-lg">
+    <section className="py-24 bg-gray-100 overflow-hidden rounded-lg">
       <div className="container px-4 mx-auto">
         <div className="max-w-xl text-center mx-auto mb-16">
           <h3 className="mb-5 text-6xl tracking-tighter">Open Positions</h3>
@@ -15,7 +15,6 @@ const Career = () => {
             <CareerItem job='Specialist' description='Forward' company='Hane and Sons' />
             <CareerItem job='Associate' description='Forward' company='Jakubowski' />
             <CareerItem job='Analyst' description='Corporate' company='Welch Inc' />
-            <CareerItem job='Internal Operations Agent' description='Marketing' company='Designer' />
           </div>
         </div>
       </div >
