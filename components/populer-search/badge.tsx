@@ -15,14 +15,14 @@ export const PopularSearchesBadge: React.FC<PopularSearchesBadgeProps> = ({ onCl
   return (
     <>
       {popularSearchs.map(({ title, slug, count }) => (
-        <Link key={title} href={`/?search=${slug}`}>
+        <Link key={title} href={`/jobs?search=${slug}`}>
           <Badge
             onClick={() => handleBadgeClick(title)}
             className="w-fit !shrink-0 z-10 bg-white tracking-tight text-sm cursor-pointer p-1.5 px-3 transition-all duration-300 hover:bg-gray-50"
             variant={'outline'}
             key={title}
           >
-            {title} ({count })
+            {title} ({count})
           </Badge>
         </Link >
       ))}

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const Features = () => {
   return (
-    <section className="py-24 pb-12 bg-gray-100 overflow-hidden rounded-lg">
+    <section className="py-24  bg-gray-100 overflow-hidden rounded-lg">
       <div className="container px-4 mx-auto flex flex-col gap-12">
         <div className="max-w-xl text-center mx-auto px-5 hidden sm:block">
           <h2 className="font-heading mb-5 text-6xl tracking-tighter">Explore Career Opportunities</h2>
@@ -22,7 +22,7 @@ export const Features = () => {
           </Button>
         </div>
       </div>
-      
+
     </section>
   );
 }

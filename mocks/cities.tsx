@@ -1,3 +1,5 @@
+import { normalizeString } from "@/utils/normalization";
+
 export const cities = [
   { value: 'adana', label: 'Adana' },
   { value: 'adiyaman', label: 'Adıyaman' },
@@ -38,8 +40,8 @@ export const cities = [
   { value: 'hatay', label: 'Hatay' },
   { value: 'igdir', label: 'Iğdır' },
   { value: 'isparta', label: 'Isparta' },
-  { value: 'istanbul', label: 'İstanbul' },
-  { value: 'izmir', label: 'İzmir' },
+  { value: 'istanbul', label: 'Istanbul' },
+  { value: 'izmir', label: 'Izmir' },
   { value: 'kahramanmaras', label: 'Kahramanmaraş' },
   { value: 'karabuk', label: 'Karabük' },
   { value: 'karaman', label: 'Karaman' },

@@ -16,34 +16,33 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { Check, ArrowDownWideNarrow } from "lucide-react"
-import { cities } from "@/mocks/Cities"
-import { normalizeString } from "@/utils/normalize-city"
+import { cities } from "../../../../mocks/Cities"
+import { normalizeString } from "@/utils/normalization"
+
 
 export function SelectCity() {
   const [open, setOpen] = React.useState(false)
   const [value, setValue] = React.useState("")
 
-
-
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
-          variant="outline"
           role="combobox"
           aria-expanded={!open}
+          variant={'outline'}
           className="justify-between w-[200px] rounded-lg"
         >
           {value
-            ? cities.find((city) => normalizeString(city.value) === normalizeString(value))?.label || "Unknown City"
+            ? cities.find((city) => normalizeString(city.value) === normalizeString(value))?.label || "Unknown"
             : "Location"}
           <ArrowDownWideNarrow className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0 max-h-60 h-fit overflow-auto">
         <Command>
-          <CommandInput placeholder="Search City" className="h-9" />
-          <CommandEmpty>No framework found.</CommandEmpty>
+          <CommandInput placeholder="Search City" className="h-9 sticky top-0" />
+          <CommandEmpty className="h-10 flex items-center justify-center text-sm">City not found !</CommandEmpty>
           <CommandGroup>
             {cities.map((city) => (
               <CommandItem

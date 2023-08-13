@@ -64,7 +64,7 @@ export const popularSearchs: JobsItemProps[] = [
   {
     count: '56',
     title: 'Istanbul',
-    slug: 'istanbul-europe',
+    slug: 'istanbul',
     data: 'istanbul'
   },
   {

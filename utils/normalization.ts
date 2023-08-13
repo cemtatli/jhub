@@ -1,4 +1,4 @@
-export function normalizeString(str: any) {
+export function normalizeString(str: string) {
   return str
     .toLocaleLowerCase('tr-TR')
     .replace(/ğ/g, 'g')
@@ -6,4 +6,6 @@ export function normalizeString(str: any) {
     .replace(/ş/g, 's')
     .replace(/ç/g, 'c')
     .replace(/ı/g, 'i')
+    .replace(/i/g, 'i')
+    .replace(/I/g, 'i')
 }
