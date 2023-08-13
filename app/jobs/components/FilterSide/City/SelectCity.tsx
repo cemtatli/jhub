@@ -16,7 +16,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { Check, ArrowDownWideNarrow } from "lucide-react"
-import { cities } from "../../../../mocks/Cities"
+import { cities } from "../../../../../mocks/Cities"
 import { normalizeString } from "@/utils/normalization"
 
 
@@ -31,7 +31,7 @@ export function SelectCity() {
           role="combobox"
           aria-expanded={!open}
           variant={'outline'}
-          className="justify-between w-[200px] rounded-lg"
+          className="justify-between w-[200px] rounded-lg outline-none"
         >
           {value
             ? cities.find((city) => normalizeString(city.value) === normalizeString(value))?.label || "Unknown"

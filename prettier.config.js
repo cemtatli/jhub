@@ -8,4 +8,5 @@ module.exports = {
   jsxBracketSameLine: true,
   proseWrap: 'always',
   plugins: ['prettier-plugin-tailwindcss'],
+  tailwindConfig: './tailwind.config.js',
 }
