@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 
 export const JobsBadge = ({ className }: any) => {
   const apiResponse = {
-    jobsCount: 5,
+    jobsCount: 25
   }
 
   const jobsCount = apiResponse?.jobsCount || 0
