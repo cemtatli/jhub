@@ -3,7 +3,6 @@ import { LoginForm } from './_components/LoginForm'
 import { Logo } from '@/components/ui/logo'
 import Image from 'next/image'
 
-
 export const metadata: Metadata = {
   title: 'JHubs — Login',
 }
@@ -15,7 +14,6 @@ const Login = () => {
         <div className="relative h-full w-full">
           <Image
             fill
-            loading="lazy"
             className="h-full overflow-hidden rounded object-cover"
             alt="Login"
             src={'/assets/slider/slider-3.webp'}

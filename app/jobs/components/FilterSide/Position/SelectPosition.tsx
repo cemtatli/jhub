@@ -14,8 +14,9 @@ import { Check, ArrowDownWideNarrow } from 'lucide-react'
 import { normalizeString } from '@/utils/normalization'
 import { cities } from '@/mocks/Cities'
 import { Button } from '@/components/ui/button'
+import { popularSearchs } from '@/mocks/PopularSearch'
 
-export function SelectCity() {
+export function SelectPosition() {
   const [open, setOpen] = React.useState<boolean>(false)
   const [value, setValue] = React.useState<string>('')
 
@@ -28,31 +29,31 @@ export function SelectCity() {
           variant={'outline'}
           className="w-full justify-between rounded-lg outline-none">
           {value
-            ? cities.find((city) => normalizeString(city.value) === normalizeString(value))
-                ?.label || 'Unknown'
-            : 'Location'}
+            ? popularSearchs.find((city) => normalizeString(city.data) === normalizeString(value))
+                ?.title || 'Unknown'
+            : 'Position'}
           <ArrowDownWideNarrow className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="h-fit max-h-60 overflow-auto p-0 md:w-[200px]">
         <Command>
-          <CommandInput placeholder="Search City" className="sticky top-0 h-9" />
+          <CommandInput placeholder="Select Position" className="sticky top-0 h-9" />
           <CommandEmpty className="flex h-10 items-center justify-center text-sm">
-            City not found !
+            Position not found !
           </CommandEmpty>
           <CommandGroup>
-            {cities.map((city) => (
+            {popularSearchs.map((item) => (
               <CommandItem
-                key={city.label}
+                key={item.title}
                 onSelect={(currentValue) => {
                   setValue(currentValue === value ? '' : currentValue)
                   setOpen(false)
                 }}>
-                {city.label}
+                {item.title}
                 <Check
                   className={cn(
                     'ml-auto h-4 w-4',
-                    value === city.value ? 'opacity-100' : 'opacity-0',
+                    value === item.data ? 'opacity-100' : 'opacity-0',
                   )}
                 />
               </CommandItem>

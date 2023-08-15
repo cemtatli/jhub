@@ -40,7 +40,14 @@ export const LoginForm = () => {
       <form onSubmit={onSubmit} className="mt-8 flex w-full max-w-lg flex-col gap-5">
         <div className="grid w-full items-center gap-1.5">
           <Label>Email</Label>
-          <Input value={data.email} onChange={handleChange} name="email" placeholder={'user@jhub.com'} id="email" type="email" />
+          <Input
+            value={data.email}
+            onChange={handleChange}
+            name="email"
+            placeholder={'user@jhub.com'}
+            id="email"
+            type="email"
+          />
         </div>
         <div className="grid w-full items-center gap-1.5">
           <Label>Password</Label>
@@ -51,15 +58,20 @@ export const LoginForm = () => {
             placeholder="*********"
             id="password"
             type="password"
-            className='pr-8'
+            className="pr-8"
           />
         </div>
         <Button type="submit">Log in</Button>
       </form>
       <Divider label="or" />
       <LoginWithGoogleButton />
-      <Link href="/signup" className="text-center text-sm font-medium hover:underline">
-        Don&lsquo;t have an account? Account ?
+      <Link href="/signup" className="group text-center text-sm font-medium">
+        Don&lsquo;t have an account?{' '}
+        <span
+          className="
+        group-hover:underline">
+          Account ?
+        </span>
       </Link>
     </div>
   )

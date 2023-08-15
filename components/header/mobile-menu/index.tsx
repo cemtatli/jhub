@@ -1,9 +1,16 @@
-import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet'
 import Link from 'next/link'
 import { MenuIcon } from 'lucide-react'
 import { Logo } from '@/components/ui/logo'
 import { Divider } from '@/components/ui/divider'
-import { Button } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
 
 export const MobileMenu = () => {
   return (
@@ -18,17 +25,23 @@ export const MobileMenu = () => {
               <Logo />
               <Divider className="mt-5" />
             </SheetTitle>
-            <nav className="grid gap-2.5">
+            <nav className=" grid gap-2.5">
               <SheetClose asChild>
-                <Link href={'/login'}>
-                  <Button variant={'outline'} className="w-full">
-                    Log in
-                  </Button>
+                <Link
+                  href={'/login'}
+                  className={buttonVariants({
+                    variant: 'outline',
+                  })}>
+                  Log in
                 </Link>
               </SheetClose>
               <SheetClose asChild>
-                <Link href={'/signup'}>
-                  <Button className="w-full">Sign up</Button>
+                <Link
+                  href={'/signup'}
+                  className={buttonVariants({
+                    variant: 'default',
+                  })}>
+                  Sign up
                 </Link>
               </SheetClose>
             </nav>

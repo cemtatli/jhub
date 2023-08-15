@@ -4,7 +4,7 @@ import JobsPage from './page'
 
 const JobLayout = () => {
   return (
-    <div className='py-5 flex h-fit-screen gap-5' >
+    <div className="flex h-fit-screen-mobile flex-col gap-5 py-5 md:h-fit-screen md:flex-row">
       <FilterSide />
       <JobsPage />
     </div>
