@@ -3,6 +3,7 @@ import { LoginForm } from './_components/LoginForm'
 import { Logo } from '@/components/ui/logo'
 import Image from 'next/image'
 
+
 export const metadata: Metadata = {
   title: 'JHubs — Login',
 }

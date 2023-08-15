@@ -94,7 +94,7 @@
 
 @layer components {
   .error {
-    @apply !border-red-600 !ring-red-500/70;
+    @apply !border-red-600 text-red-500 !ring-red-500;
   }
   small {
     @apply mt-1 leading-none text-red-500;

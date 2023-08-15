@@ -1,18 +1,18 @@
 'use client'
 
-import { Navigation, Autoplay, Scrollbar, A11y, } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { SliderData } from './data';
-import Image from 'next/image';
+import { Navigation, Autoplay, Scrollbar, A11y } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { SliderData } from './data'
+import Image from 'next/image'
 
-import 'swiper/css';
+import 'swiper/css'
 import 'swiper/css/autoplay'
-import 'swiper/css/scrollbar';
+import 'swiper/css/scrollbar'
 
 const Slider = () => {
   return (
     <Swiper
-      className='h-96 w-full rounded-lg py-24 lg:pb-1 mt-10'
+      className="mt-10 h-96 w-full rounded-lg py-24 lg:pb-1"
       modules={[Navigation, Autoplay, A11y, Scrollbar]}
       slidesPerView={1}
       autoplay={{
@@ -20,16 +20,20 @@ const Slider = () => {
         disableOnInteraction: false,
       }}
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-    >
+      scrollbar={{ draggable: true }}>
       {SliderData.map((data, index) => (
         <SwiperSlide key={index}>
-          <Image loading='lazy' fill className='aspect-square object-cover' src={data.src} alt={data.alt} />
+          <Image
+            loading="lazy"
+            fill
+            className="aspect-square object-cover"
+            src={data.src}
+            alt={data.alt}
+          />
         </SwiperSlide>
-      )
-      )}
+      ))}
     </Swiper>
-  );
-};
+  )
+}
 
 export { Slider }

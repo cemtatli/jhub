@@ -43,7 +43,7 @@ export const EmployerSignUpForm = () => {
     <div className="mt-5 flex w-full max-w-lg flex-col gap-5 ">
       <form onSubmit={handleSubmit(onSubmit)} className="flex w-full max-w-lg flex-col gap-5">
         <div className="grid w-full items-center gap-1.5">
-          <Label>Company Name </Label>
+          <Label className={`${errors.company_name ? 'error' : ''}`}>Company Name </Label>
           <Input
             {...register('company_name')}
             id="company_name"
@@ -54,7 +54,7 @@ export const EmployerSignUpForm = () => {
           {errors.company_name && <small>{errors.company_name.message}</small>}
         </div>
         <div className="grid w-full items-center gap-1.5">
-          <Label>Email</Label>
+          <Label className={`${errors.company_name ? 'error' : ''}`}> Email</Label>
           <Input
             placeholder={'employer@jhub.com'}
             {...register('email')}
@@ -65,18 +65,23 @@ export const EmployerSignUpForm = () => {
           {errors.email && <small>{errors.email.message}</small>}
         </div>
         <div className="grid w-full items-center gap-1.5">
-          <Label>Password</Label>
+          <Label className={`${errors.password ? 'error' : ''}`}>Password</Label>
           <Input
             {...register('password')}
             type="password"
             placeholder="********"
-            className={`${errors.company_name ? 'error' : ''} pr-8`}
+            className={`${errors.password ? 'error' : ''} pr-8`}
           />
           {errors.password && <small>{errors.password.message}</small>}
         </div>
         <div className="items-top flex flex-col gap-2">
           <div className="flex w-full items-center gap-x-2">
-            <input type="checkbox" id="privacy" {...register('privacy')} className="accent-foreground " />
+            <input
+              type="checkbox"
+              id="privacy"
+              {...register('privacy')}
+              className="accent-foreground "
+            />
             <Label
               htmlFor="privacy"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
@@ -90,7 +95,8 @@ export const EmployerSignUpForm = () => {
       <Divider label="or" />
       <LoginWithGoogleButton />
       <Link href="/login" className="text-center text-sm font-medium">
-        Do you have already <span className="font-semibold underline hover:text-red-500">Account ?</span>
+        Do you have already{' '}
+        <span className="font-semibold underline hover:text-red-500">Account ?</span>
       </Link>
     </div>
   )

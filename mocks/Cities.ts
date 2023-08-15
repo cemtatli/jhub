@@ -1,4 +1,4 @@
-const cities = [
+export const cities = [
   { value: 'adana', label: 'Adana' },
   { value: 'adiyaman', label: 'Adıyaman' },
   { value: 'afyon', label: 'Afyon' },
@@ -32,7 +32,7 @@ const cities = [
   { value: 'erzurum', label: 'Erzurum' },
   { value: 'eskisehir', label: 'Eskişehir' },
   { value: 'gaziantep', label: 'Gaziantep' },
-  { value: 'giresun', label: 'Giresun' },s
+  { value: 'giresun', label: 'Giresun' },
   { value: 'gumushane', label: 'Gümüşhane' },
   { value: 'hakkari', label: 'Hakkari' },
   { value: 'hatay', label: 'Hatay' },
@@ -80,7 +80,4 @@ const cities = [
   { value: 'yalova', label: 'Yalova' },
   { value: 'yozgat', label: 'Yozgat' },
   { value: 'zonguldak', label: 'Zonguldak' },
-];
-
-
-export default cities;
+]

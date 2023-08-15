@@ -48,7 +48,7 @@ export const UserSignUpForm = () => {
     <div className="mt-5 flex w-full max-w-lg flex-col gap-5">
       <form onSubmit={handleSubmit(onSubmit)} className="flex w-full max-w-lg flex-col gap-5">
         <div className="grid w-full items-center gap-1.5">
-          <Label>Name </Label>
+          <Label className={`${errors.name ? 'error' : ''}`}>Name </Label>
           <Input
             {...register('name')}
             id="name"
@@ -60,44 +60,49 @@ export const UserSignUpForm = () => {
           {errors.name && <small>{errors.name.message}</small>}
         </div>
         <div className="grid w-full items-center gap-1.5">
-          <Label>Surname </Label>
+          <Label className={`${errors.surname ? 'error' : ''}`}>Surname</Label>
           <Input
             {...register('surname')}
             name="surname"
             id="surname"
             type="text"
             placeholder="Tatlı"
-            className={`${errors.name ? 'error' : ''}`}
+            className={`${errors.surname ? 'error' : ''}`}
           />
           {errors.surname && <small>{errors.surname.message}</small>}
         </div>
         <div className="grid w-full items-center gap-1.5">
-          <Label>Email </Label>
+          <Label className={`${errors.email ? 'error' : ''}`}>Email </Label>
           <Input
             {...register('email')}
             id="email"
             name="email"
             type="email"
             placeholder={'user@jhub.com'}
-            className={`${errors.name ? 'error' : ''}`}
+            className={`${errors.email ? 'error' : ''}`}
           />
           {errors.email && <small>{errors.email.message}</small>}
         </div>
         <div className="grid w-full items-center gap-1.5">
-          <Label>Password </Label>
+          <Label className={`${errors.password ? 'error' : ''}`}>Password </Label>
           <Input
             {...register('password')}
             name="password"
             id="password"
             type="password"
             placeholder="*********"
-            className={`${errors.name ? 'error' : ''} pr-8`}
+            className={`${errors.password ? 'error' : ''} pr-8`}
           />
           {errors.password && <small>{errors.password.message}</small>}
         </div>
         <div className="items-top flex flex-col gap-2">
           <div className="flex w-full items-center gap-x-2">
-            <input type="checkbox" id="privacy" {...register('privacy')} className="accent-foreground" />
+            <input
+              type="checkbox"
+              id="privacy"
+              {...register('privacy')}
+              className="accent-foreground"
+            />
             <Label
               htmlFor="privacy"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
