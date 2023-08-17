@@ -27,7 +27,7 @@ export function SelectPosition() {
           role="combobox"
           aria-expanded={!open}
           variant={'outline'}
-          className="w-full justify-between rounded-lg outline-none">
+          className="w-full justify-between truncate rounded-lg outline-none">
           {value
             ? popularSearchs.find((city) => normalizeString(city.data) === normalizeString(value))
                 ?.title || 'Unknown'
@@ -35,7 +35,7 @@ export function SelectPosition() {
           <ArrowDownWideNarrow className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="h-fit max-h-60 overflow-auto p-0 md:w-[200px]">
+      <PopoverContent className="x h-fit max-h-60 w-80 overflow-auto p-0 md:w-60">
         <Command>
           <CommandInput placeholder="Select Position" className="sticky top-0 h-9" />
           <CommandEmpty className="flex h-10 items-center justify-center text-sm">

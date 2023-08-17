@@ -1,4 +1,4 @@
-import './globals.css'
+import '@/styles/globals.css';
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={font.className}>
         <Header />
         <Wrapper>{children}</Wrapper>
-        <Toaster position="top-center" reverseOrder={true} />
+        <Toaster position="top-center" />
       </body>
     </html>
   )

@@ -71,7 +71,7 @@
 }
 
 ::-webkit-scrollbar {
-  @apply w-[6px];
+  @apply h-1 w-1;
 }
 ::-webkit-scrollbar-track {
   @apply bg-background;

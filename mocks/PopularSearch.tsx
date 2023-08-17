@@ -33,9 +33,9 @@ export const popularSearchs: JobsItemProps[] = [
   },
   {
     count: '6',
-    title: 'Digital Marketing Specialist',
-    slug: 'digital-marketing-specialist',
-    data: 'Digital Marketing Specialist',
+    title: 'Digital Marketing',
+    slug: 'digital-marketing',
+    data: 'Digital Marketing',
   },
   {
     count: '1',
@@ -45,9 +45,9 @@ export const popularSearchs: JobsItemProps[] = [
   },
   {
     count: '1',
-    title: 'Software Development Expert',
-    slug: 'software-development-expert',
-    data: 'Software Development Expert',
+    title: 'Software Developer',
+    slug: 'software-developer',
+    data: 'Software Developer',
   },
   {
     count: '1',

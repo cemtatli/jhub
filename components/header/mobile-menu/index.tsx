@@ -10,7 +10,7 @@ import Link from 'next/link'
 import { MenuIcon } from 'lucide-react'
 import { Logo } from '@/components/ui/logo'
 import { Divider } from '@/components/ui/divider'
-import { Button, buttonVariants } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 
 export const MobileMenu = () => {
   return (
@@ -25,7 +25,7 @@ export const MobileMenu = () => {
               <Logo />
               <Divider className="mt-5" />
             </SheetTitle>
-            <nav className=" grid gap-2.5">
+            <nav className="grid gap-2.5">
               <SheetClose asChild>
                 <Link
                   href={'/login'}
@@ -45,6 +45,17 @@ export const MobileMenu = () => {
                 </Link>
               </SheetClose>
             </nav>
+
+            <SheetClose asChild>
+              <Link href={'/cv'} className={buttonVariants({})}>
+                My resumes
+              </Link>
+            </SheetClose>
+            <SheetClose asChild>
+              <Link href={'/jobs'} className={buttonVariants({})}>
+                Job Searches
+              </Link>
+            </SheetClose>
           </SheetHeader>
         </SheetContent>
       </Sheet>

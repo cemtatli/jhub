@@ -1,17 +1,20 @@
-import React from 'react';
-import Card from './Card';
+import React from 'react'
+import Card from './Card'
 
 export const Testimonial = () => {
   return (
-    <section className="relative py-24 lg:pb-16 overflow-hidden">
+    <section className="relative overflow-hidden py-24 lg:pb-16">
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]" />
       <div className="px-4">
-        <div className="relative max-w-xl text-center mx-auto mb-16">
+        <div className="relative mx-auto mb-16 max-w-xl text-center">
           <h2 className="font mb-4 text-6xl tracking-tighter">What our users say</h2>
-          <p className="text-xl tracking-tight">Whereby is the super simple way to connect over video of apps, downloads, or long meeting links. It has truly revolutionized our teams communication.</p>
+          <p className="text-xl tracking-tight">
+            Whereby is the super simple way to connect over video of apps, downloads, or long
+            meeting links. It has truly revolutionized our teams communication.
+          </p>
         </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-nowrap justify-center -m-3 mb-3">
+        <div className="mx-auto max-w-4xl">
+          <div className="-m-3 mb-3 flex flex-nowrap justify-center">
             <Card
               comment="I absolutely love how easy it is to use Whereby. Connecting with others has never been smoother!"
               name="Colin"
@@ -43,15 +46,46 @@ export const Testimonial = () => {
               src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/417.jpg"
             />
           </div>
-          <div className="flex flex-nowrap justify-center -m-3">
-            <Card comment="Whereby' s simplicity is unmatched. I can focus on my work instead of struggling with complicated video tools." name='Carolanne' title='Dynamic Markets Analyst' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/861.jpg' />
-            <Card comment="I used to dread virtual meetings, but Whereby has changed that. It' s user-friendly and efficient." name='Mertie' title='Legacy Interactions Agent' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/883.jpg' />
-            <Card comment="Whereby' s simplicity is unmatched. I can focus on my work instead of struggling with complicated video tools." name='Carolanne' title='Dynamic Markets Analyst' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/861.jpg' />
-            <Card comment="I used to dread virtual meetings, but Whereby has changed that. It' s user-friendly and efficient." name='Mertie' title='Legacy Interactions Agent' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/883.jpg' />
-            <Card comment="Whereby has simplified our company-wide communications. It' s a must-have tool for remote teams." name='Ericka' title='Regional Response Manager' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1115.jpg' />
-            <Card comment="Whereby has simplified our company-wide communications. It' s a must-have tool for remote teams." name='Ericka' title='Regional Response Manager' src='https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1115.jpg' />s
+          <div className="-m-3 flex flex-nowrap justify-center">
+            <Card
+              comment="Whereby' s simplicity is unmatched. I can focus on my work instead of struggling with complicated video tools."
+              name="Carolanne"
+              title="Dynamic Markets Analyst"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/861.jpg"
+            />
+            <Card
+              comment="I used to dread virtual meetings, but Whereby has changed that. It' s user-friendly and efficient."
+              name="Mertie"
+              title="Legacy Interactions Agent"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/883.jpg"
+            />
+            <Card
+              comment="Whereby' s simplicity is unmatched. I can focus on my work instead of struggling with complicated video tools."
+              name="Carolanne"
+              title="Dynamic Markets Analyst"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/861.jpg"
+            />
+            <Card
+              comment="I used to dread virtual meetings, but Whereby has changed that. It' s user-friendly and efficient."
+              name="Mertie"
+              title="Legacy Interactions Agent"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/883.jpg"
+            />
+            <Card
+              comment="Whereby has simplified our company-wide communications. It' s a must-have tool for remote teams."
+              name="Ericka"
+              title="Regional Response Manager"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1115.jpg"
+            />
+            <Card
+              comment="Whereby has simplified our company-wide communications. It' s a must-have tool for remote teams."
+              name="Ericka"
+              title="Regional Response Manager"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1115.jpg"
+            />
+            s
           </div>
-          <div className='flex flex-nowrap justify-center -m-3 mb-3'>
+          <div className="-m-3 mb-3 flex flex-nowrap justify-center">
             <Card
               comment="Using Whereby for client meetings has been a game changer. It's reliable and professional."
               name="Abbie"
@@ -73,7 +107,6 @@ export const Testimonial = () => {
           </div>
         </div>
       </div>
-    </section >
-
-  );
+    </section>
+  )
 }

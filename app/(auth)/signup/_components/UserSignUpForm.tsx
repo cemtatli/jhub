@@ -37,7 +37,7 @@ export const UserSignUpForm = () => {
         const displayName = `${data.name} ${data.surname}`
         await updateProfile(user, { displayName })
         toast.success(`${displayName} have successfully registered.`)
-        router.push('/')
+        router.push('/cv')
       }
     } catch (error: any) {
       toast.error(error.message)

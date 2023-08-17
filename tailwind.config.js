@@ -65,11 +65,42 @@ module.exports = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 },
         },
+        'fade-out-down': {
+          from: {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+          to: {
+            opacity: '0',
+            transform: 'translateY(40%)',
+          },
+        },
+        'make-it-bigger': {
+          '0%': {
+            transform: 'translateY(0%)',
+          },
+          '80%': {
+            transform: 'translateY(-30%)',
+          },
+          '90%': {
+            transform: 'translateY(-10%) scale(1.75)',
+          },
+          '100%': {
+            transform: 'translateY(0%) scale(2)',
+            opacity: 0.3,
+            zIndex: -1,
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-out-down': 'fade-out-down linear forwards',
+        'make-it-bigger': 'make-it-bigger linear forwards',
       },
+      supports: {
+        'no-scroll-driven-animations': 'not(animation-timeline: scroll())',
+      },  
       fontFamily: {
         satoshi: ['Satoshi', 'sans-serif'],
       },

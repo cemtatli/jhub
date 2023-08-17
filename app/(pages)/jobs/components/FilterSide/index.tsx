@@ -6,13 +6,13 @@ import SelectType from './Type/SelectType'
 
 const FilterSide = () => {
   return (
-    <aside className="flex flex-col-reverse gap-5 md:w-52 md:flex-col">
+    <aside className="flex flex-col-reverse gap-5 md:w-52 md:flex-col lg:w-60">
+      <SelectCity />
+      <SelectPosition />
       <div className="grid grid-cols-2 gap-5 md:grid-cols-1 ">
         <SelectDate />
         <SelectType />
       </div>
-      <SelectPosition />
-      <SelectCity />
     </aside>
   )
 }
