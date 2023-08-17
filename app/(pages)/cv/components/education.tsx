@@ -14,7 +14,7 @@ type TFormValues = {
 }
 
 export function Education() {
-  const { onHandleNext, setFormData, formData } = useFormState()
+  const { onHandleNext, setFormData, formData, onHandleBack } = useFormState()
   const { register, handleSubmit } = useForm<TFormValues>({
     defaultValues: formData,
   })
@@ -27,6 +27,7 @@ export function Education() {
   return (
     <form className="flex w-full flex-1 flex-col gap-4" onSubmit={handleSubmit(onHandleFormSubmit)}>
       <h2 className="text-2xl font-medium tracking-tighter">Education</h2>
+      {/* Form */}
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2 flex w-full flex-1  flex-col gap-4 md:flex-row">
           <div className="flex w-full flex-col gap-1.5">
@@ -51,16 +52,21 @@ export function Education() {
             id="message"
           />
         </div>
-        <div className="flex w-full flex-col gap-1.5">
+        <div className="grid w-full gap-1.5">
           <Label htmlFor="started">Start Date</Label>
           <Input type="date" id="started" {...register('started')} placeholder="started" />
         </div>
-        <div className="flex w-full flex-col gap-1.5">
+        <div className="grid w-full gap-1.5">
           <Label htmlFor="ended">End Date</Label>
           <Input type="date" id="ended" {...register('ended')} placeholder="ended" />
         </div>
       </div>
-      <Button>Next</Button>
+      <div className="mt-4 flex w-full items-center justify-between gap-4 ">
+        <Button className="w-full" onClick={onHandleBack}>
+          Back
+        </Button>
+        <Button className="w-full">Next</Button>
+      </div>
     </form>
   )
 }

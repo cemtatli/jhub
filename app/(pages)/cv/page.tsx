@@ -1,18 +1,18 @@
 'use client'
-import { EmailForm } from './components/EmailForm'
+import { Personal } from './components/personal'
 import { FormProvider, useFormState } from './components/FormContext'
-import { PasswordForm } from './components/PasswordForm'
+import { Skills } from './components/skills'
 import { Education } from './components/education'
 
 function ActiveStepFormComponent() {
   const { step } = useFormState()
   switch (step) {
     case 1:
-      return <Education />
+      return <Personal />
     case 2:
-      return <EmailForm />
+      return <Education />
     case 3:
-      return <PasswordForm />
+      return <Skills />
     default:
       return null
   }
@@ -20,7 +20,7 @@ function ActiveStepFormComponent() {
 
 export default function Cv() {
   return (
-    <section className="grid h-fit-screen md:h-fit-screen pt-12">
+    <section className="grid h-fit-screen pt-12 md:h-fit-screen">
       <FormProvider>
         <ActiveStepFormComponent />
       </FormProvider>
