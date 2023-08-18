@@ -26,7 +26,7 @@ export function Education() {
 
   return (
     <form className="flex w-full flex-1 flex-col gap-4" onSubmit={handleSubmit(onHandleFormSubmit)}>
-      <h2 className="text-2xl font-medium tracking-tighter">Education</h2>
+      <h2 className="text-2xl font-medium tracking-tighter">Education 2/3</h2>
       {/* Form */}
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2 flex w-full flex-1  flex-col gap-4 md:flex-row">

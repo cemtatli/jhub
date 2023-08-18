@@ -73,9 +73,11 @@
 ::-webkit-scrollbar {
   @apply h-1 w-1;
 }
+
 ::-webkit-scrollbar-track {
   @apply bg-background;
 }
+
 ::-webkit-scrollbar-thumb {
   @apply rounded-lg bg-foreground/25;
 }
@@ -84,6 +86,7 @@
   * {
     @apply scroll-smooth border-border antialiased;
   }
+
   body {
     @apply bg-background text-base text-gray-800;
   }
@@ -93,6 +96,7 @@
   .error {
     @apply !border-red-600 text-red-500 !ring-red-500;
   }
+
   small {
     @apply mt-1 leading-none text-red-500;
   }

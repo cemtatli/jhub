@@ -1,9 +1,11 @@
 const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <main
-      className="overflow-auto h-full xl:px-1 flex flex-col gap-y-12 sm:gap-y-24 container">
-      {children}
-    </main>
+    <>
+      <main className="container flex h-full flex-col gap-y-12 overflow-auto sm:gap-y-24 xl:px-1">
+        {children}
+      </main>
+
+    </>
   )
 }
 

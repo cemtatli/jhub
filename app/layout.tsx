@@ -1,4 +1,4 @@
-import '@/styles/globals.css';
+import '@/styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const font = Inter({ subsets: ['latin'] })
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={font.className}>
         <Header />
         <Wrapper>{children}</Wrapper>

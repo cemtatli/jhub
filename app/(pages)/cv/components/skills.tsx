@@ -30,7 +30,7 @@ export function Skills() {
   }
   return (
     <form className="flex flex-col gap-4" onSubmit={handleSubmit(onHandleFormSubmit)}>
-      <h2 className="text-2xl font-medium tracking-tighter">Skills</h2>
+      <h2 className="text-2xl font-medium tracking-tighter">Skills 3/3</h2>
       <div className="grid grid-cols-3 gap-4">
         <div className="flex w-full flex-col gap-2">
           <Label htmlFor="html">HTML</Label>
@@ -65,7 +65,7 @@ export function Skills() {
         <Button className="w-full" type="button" onClick={onHandleBack} variant={'outline'}>
           Back
         </Button>
-        <Button className="w-full">Create</Button>
+        <Button className="w-full">Create a resume</Button>
       </div>
     </form>
   )

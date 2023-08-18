@@ -6,6 +6,7 @@ import { Education } from './components/education'
 
 function ActiveStepFormComponent() {
   const { step } = useFormState()
+
   switch (step) {
     case 1:
       return <Personal />
@@ -19,11 +20,5 @@ function ActiveStepFormComponent() {
 }
 
 export default function Cv() {
-  return (
-    <section className="grid h-fit-screen pt-12 md:h-fit-screen">
-      <FormProvider>
-        <ActiveStepFormComponent />
-      </FormProvider>
-    </section>
-  )
+  return <ActiveStepFormComponent />
 }

@@ -26,7 +26,8 @@ export function Personal() {
 
   return (
     <form className="flex flex-col gap-4" onSubmit={handleSubmit(onHandleFormSubmit)}>
-      <h2 className="text-2xl font-medium tracking-tighter">Personal</h2>
+      <h2 className="text-2xl font-medium tracking-tighter">Personal
+        1/3</h2>
       {/* Form */}
       <div className="grid gap-4">
         <div className="flex w-full flex-col gap-4">

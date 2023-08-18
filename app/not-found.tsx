@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
-
 import Link from 'next/link'
 
 const NotFound = () => {
