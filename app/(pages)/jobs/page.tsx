@@ -1,30 +1,25 @@
 import { FC } from 'react'
+import JobItems from './item'
 
 interface JobsPageProps {}
 
 const JobsPage: FC<JobsPageProps> = ({}) => {
   return (
-    <div className="flex flex-1 flex-col gap-5 overflow-auto">
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
-      <div className="rounded-lg border p-5">Lorem ipsum dolor sit amet.</div>
+    <div className="grid gap-4 overflow-auto md:grid-cols-2 w-full ">
+      <JobItems />
+      <JobItems />
+      <JobItems />
+      <JobItems />
+      <JobItems />
+      <JobItems />
+      <JobItems />
+      <JobItems />
+      <JobItems />
+      <JobItems />
+      <JobItems />
+      <JobItems />
+      <JobItems />
+      <JobItems />
     </div>
   )
 }

@@ -2,28 +2,34 @@ import { JobsItemProps } from '@/types'
 
 export const popularSearchs: JobsItemProps[] = [
   {
-    count: '12',
+    count: '8',
     title: 'React Native & Flutter',
     slug: 'react-native-flutter',
     data: 'React Native & Flutter',
   },
   {
-    count: '42',
+    count: '12',
     title: 'Front-end Developer',
     slug: 'frontend-developer',
     data: 'Front-end Developer',
   },
   {
-    count: '7',
+    count: '16',
     title: 'Full-stack Developer',
     slug: 'fullstack',
     data: 'Full-stack Developer',
   },
   {
-    count: '2',
+    count: '3',
     title: 'Tester',
     slug: 'tester',
     data: 'tester',
+  },
+  {
+    count: '2',
+    title: 'Prompt Engineer',
+    slug: 'prompt-engineer',
+    data: 'promptengineer',
   },
   {
     count: '4',
@@ -38,39 +44,27 @@ export const popularSearchs: JobsItemProps[] = [
     data: 'Digital Marketing',
   },
   {
-    count: '1',
+    count: '5',
+    title: 'Backend Developer',
+    slug: 'backend-developer',
+    data: 'backenddeveloper',
+  },
+  {
+    count: '3',
     title: 'HR Specialist',
     slug: 'hr-specialist',
     data: 'HR Specialist',
   },
   {
-    count: '1',
+    count: '6',
     title: 'Software Developer',
     slug: 'software-developer',
     data: 'Software Developer',
   },
   {
-    count: '1',
+    count: '2',
     title: 'Project Manager',
     slug: 'project-manager',
     data: 'Project Manager',
-  },
-  {
-    count: '24',
-    title: 'Ankara',
-    slug: 'ankara',
-    data: 'ankara',
-  },
-  {
-    count: '56',
-    title: 'Istanbul',
-    slug: 'istanbul',
-    data: 'istanbul',
-  },
-  {
-    count: '1',
-    title: 'Izmir',
-    slug: 'izmir',
-    data: 'izmir',
   },
 ]

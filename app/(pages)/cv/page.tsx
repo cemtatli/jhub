@@ -1,6 +1,6 @@
 'use client'
 import { Personal } from './components/personal'
-import { FormProvider, useFormState } from './components/FormContext'
+import { useFormState } from './components/FormContext'
 import { Skills } from './components/skills'
 import { Education } from './components/education'
 

@@ -17,7 +17,8 @@ const SignUp = () => {
             loading="lazy"
             className="h-full overflow-hidden rounded object-cover"
             alt="SignUp"
-            src='/assets/slider/slider-5.webp'
+            placeholder="empty"
+            src="/assets/slider/slider-5.webp"
           />
         </div>
       </div>

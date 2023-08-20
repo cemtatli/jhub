@@ -5,6 +5,9 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 
+import { yupResolver } from '@hookform/resolvers/yup'
+import { resumeEducationSchema } from '@/validations'
+
 type TFormValues = {
   school: string
   city: string
@@ -15,7 +18,12 @@ type TFormValues = {
 
 export function Education() {
   const { onHandleNext, setFormData, formData, onHandleBack } = useFormState()
-  const { register, handleSubmit } = useForm<TFormValues>({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(resumeEducationSchema),
     defaultValues: formData,
   })
 
@@ -23,7 +31,6 @@ export function Education() {
     setFormData((prev: any) => ({ ...prev, ...data }))
     onHandleNext()
   }
-
   return (
     <form className="flex w-full flex-1 flex-col gap-4" onSubmit={handleSubmit(onHandleFormSubmit)}>
       <h2 className="text-2xl font-medium tracking-tighter">Education 2/3</h2>
@@ -32,15 +39,16 @@ export function Education() {
         <div className="col-span-2 flex w-full flex-1  flex-col gap-4 md:flex-row">
           <div className="flex w-full flex-col gap-1.5">
             <Label htmlFor="school">School</Label>
-            <Input id="school" {...register('school')} placeholder="School" required={true} />
+            <Input id="school" {...register('school')} placeholder="School" />
+            {errors.school && <small className="text-red-500">{errors.school.message}</small>}
           </div>
           <div className="flex w-full flex-col gap-1.5">
             <Label htmlFor="degree">Degree</Label>
-            <Input id="degree" {...register('degree')} placeholder="Degree" required={true} />
+            <Input id="degree" {...register('degree')} placeholder="Degree" />
           </div>
           <div className="flex w-full flex-col gap-1.5">
             <Label htmlFor="school">City</Label>
-            <Input id="city" {...register('city')} placeholder="City" required={true} />
+            <Input id="city" {...register('city')} placeholder="City" />
           </div>
         </div>
         <div className="col-span-2 grid w-full gap-1.5">

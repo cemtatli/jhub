@@ -7,7 +7,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet'
 import Link from 'next/link'
-import { MenuIcon } from 'lucide-react'
+import { MenuIcon, ScrollText, SearchCodeIcon } from 'lucide-react'
 import { Logo } from '@/components/ui/logo'
 import { Divider } from '@/components/ui/divider'
 import { buttonVariants } from '@/components/ui/button'
@@ -19,7 +19,7 @@ export const MobileMenu = () => {
         <SheetTrigger>
           <MenuIcon size={24} />
         </SheetTrigger>
-        <SheetContent side={'top'} aria-label="menu">
+        <SheetContent side={'top'}>
           <SheetHeader>
             <SheetTitle>
               <Logo />
@@ -45,17 +45,26 @@ export const MobileMenu = () => {
                 </Link>
               </SheetClose>
             </nav>
-
-            <SheetClose asChild>
-              <Link href={'/cv'} className={buttonVariants({})}>
-                My resumes
-              </Link>
-            </SheetClose>
-            <SheetClose asChild>
-              <Link href={'/jobs'} className={buttonVariants({})}>
-                Job Searches
-              </Link>
-            </SheetClose>
+            <div className="flex w-full flex-1 flex-col gap-2.5 pt-8">
+              <SheetClose asChild>
+                <Link
+                  href={'/cv'}
+                  className={buttonVariants({
+                    variant: 'secondary',
+                  })}>
+                  <ScrollText className="mr-2 h-[18px] w-[18px]" /> My resumes
+                </Link>
+              </SheetClose>
+              <SheetClose asChild>
+                <Link
+                  href={'/jobs'}
+                  className={buttonVariants({
+                    variant: 'secondary',
+                  })}>
+                  <SearchCodeIcon className="mr-2 h-[18px] w-[18px]" /> Job Searches
+                </Link>
+              </SheetClose>
+            </div>
           </SheetHeader>
         </SheetContent>
       </Sheet>

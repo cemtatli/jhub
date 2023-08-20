@@ -16,11 +16,11 @@ export const PopularSearches = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center gap-y-5 py-24 lg:pb-16">
-      <h2 className="mb-5 text-5xl font-medium tracking-tighter text-center ">Popular Searches</h2>
+      <h2 className="mb-5 text-center text-5xl font-medium tracking-tighter ">Popular Searches</h2>
       <div className="relative flex w-full max-w-screen-sm">
         <InputWithButton onChange={handleInputChange} value={selected} label={'Search'} />
       </div>
-      <div className="flex-items-center flex flex-wrap justify-center gap-2.5">
+      <div className="flex flex-wrap items-center justify-center gap-2.5">
         <PopularSearchesBadge onClick={handleBadgeClick} />
       </div>
     </div>

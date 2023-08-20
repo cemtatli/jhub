@@ -32,7 +32,9 @@ const AnimatedTabsWithUnderline = () => {
             />
           )}
 
-          <span className="relative z-10 drop-shadow-sm tracking-tight uppercase transition duration-500">{tab.name}</span>
+          <span className="relative z-10 uppercase tracking-tight drop-shadow-sm transition duration-500">
+            {tab.name}
+          </span>
         </Link>
       ))}
     </div>

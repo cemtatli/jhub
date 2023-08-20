@@ -6,10 +6,10 @@ import { EmployerSignUpForm } from './EmployerSignUpForm'
 
 export const SignUpForm = () => {
   return (
-    <Tabs defaultValue="user" className="h-full mt-10 w-full max-w-lg md:max-h-[70vh]">
-      <TabsList>
-        <TabsTrigger value="user">User</TabsTrigger>
-        <TabsTrigger value="employer">Employer</TabsTrigger>
+    <Tabs defaultValue="user" className="mt-10 h-full w-full max-w-lg md:max-h-[70vh]">
+      <TabsList className="rounded-lg transition w-full">
+        <TabsTrigger className='rounded-lg flex-1' value="user">User</TabsTrigger>
+        <TabsTrigger className='rounded-lg flex-1' value="employer">Employer</TabsTrigger>
       </TabsList>
       <TabsContent value="user">
         <UserSignUpForm />

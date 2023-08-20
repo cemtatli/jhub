@@ -4,7 +4,7 @@ const NotFound = () => {
   return (
     <section className="flex h-fit-screen items-center justify-center gap-y-5">
       <div className="mx-auto flex max-w-sm flex-col items-center text-center">
-        <p className="rounded-full bg-blue-50 p-3 text-sm font-medium text-blue-500 dark:bg-gray-800">
+        <p className="rounded-full bg-blue-50 p-2.5 text-sm font-medium text-blue-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -26,25 +26,23 @@ const NotFound = () => {
           The page you are looking for doesn&apos;t exist. Here are some helpful links
         </p>
 
-        <div className="mt-6 flex w-full shrink-0 items-center gap-x-3 sm:w-auto">
-          <Link
-            href={'/'}
-            className="flex w-1/2 items-center justify-center gap-x-2 rounded-lg border bg-white px-5 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800 sm:w-auto">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="h-5 w-5 rtl:rotate-180">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-              />
-            </svg>
-            <span>Go back</span>
-          </Link>
-        </div>
+        <Link
+          href={'/'}
+          className="mt-6 flex  items-center justify-center gap-x-2 rounded-lg border bg-white px-5 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800 sm:w-auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="h-5 w-5 rtl:rotate-180">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+            />
+          </svg>
+          <span>Go back</span>
+        </Link>
       </div>
     </section>
   )

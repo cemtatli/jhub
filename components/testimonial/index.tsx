@@ -13,7 +13,7 @@ export const Testimonial = () => {
             meeting links. It has truly revolutionized our teams communication.
           </p>
         </div>
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-5xl">
           <div className="-m-3 mb-3 flex flex-nowrap justify-center">
             <Card
               comment="I absolutely love how easy it is to use Whereby. Connecting with others has never been smoother!"
@@ -83,7 +83,6 @@ export const Testimonial = () => {
               title="Regional Response Manager"
               src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1115.jpg"
             />
-            s
           </div>
           <div className="-m-3 mb-3 flex flex-nowrap justify-center">
             <Card

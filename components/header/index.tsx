@@ -15,7 +15,6 @@ export const Header = () => {
     <header className="sticky top-0 z-50 flex h-16 items-center justify-center border-b border-gray-100 bg-white/90 backdrop-blur-lg md:h-24">
       <div className="container flex items-center justify-between xl:px-0">
         <Logo size="28" />
-        <NavMenu />
         <nav className="hidden space-x-2.5 md:flex">
           <Link href={'/login'} className={buttonVariants({ variant: 'ghost' })}>
             Log in

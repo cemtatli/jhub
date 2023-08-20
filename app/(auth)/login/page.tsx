@@ -16,6 +16,7 @@ const Login = () => {
             fill
             className="h-full overflow-hidden rounded object-cover"
             alt="Login"
+            placeholder="empty"
             src={'/assets/slider/slider-3.webp'}
           />
         </div>

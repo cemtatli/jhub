@@ -26,7 +26,6 @@ export const userRegisterSchema = yup.object().shape({
     .oneOf([true], 'Please check the box to proceed.')
     .required('The box is required.'),
 })
-
 export const employerRegisterSchema = yup.object().shape({
   company_name: yup
     .string()
@@ -49,7 +48,19 @@ export const employerRegisterSchema = yup.object().shape({
     .oneOf([true], 'Please check the box to proceed.')
     .required('The box is required.'),
 })
-
-export const resumePersonal = yup.object().shape({
-  full_name: yup.string().min(2).required('hoop'),
+export const resumePersonalSchema = yup.object().shape({
+  school: yup.string().required('School is required'),
+  degree: yup.string().required('Degree is required'),
+  city: yup.string().required('City is required'),
+  explanations: yup.string(),
+  started: yup.date(),
+  ended: yup.date(),
+})
+export const resumeEducationSchema = yup.object().shape({
+  school: yup.string().required('School is required'),
+  degree: yup.string().required('Degree is required'),
+  city: yup.string().required('City is required'),
+  explanations: yup.string(),
+  started: yup.date(),
+  ended: yup.date(),
 })
