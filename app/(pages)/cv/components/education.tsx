@@ -40,7 +40,6 @@ export function Education() {
           <div className="flex w-full flex-col gap-1.5">
             <Label htmlFor="school">School</Label>
             <Input id="school" {...register('school')} placeholder="School" />
-            {errors.school && <small className="text-red-500">{errors.school.message}</small>}
           </div>
           <div className="flex w-full flex-col gap-1.5">
             <Label htmlFor="degree">Degree</Label>
