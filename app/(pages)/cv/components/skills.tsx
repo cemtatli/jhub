@@ -26,7 +26,7 @@ export function Skills() {
   if (isCreated) {
     console.log(formData, 'data')
     router.push('/')
-    toast.success('Succesfully !')
+    toast.success('Successfully !')
   }
   return (
     <form className="flex flex-col gap-4" onSubmit={handleSubmit(onHandleFormSubmit)}>
@@ -65,7 +65,7 @@ export function Skills() {
         <Button className="w-full" type="button" onClick={onHandleBack} variant={'outline'}>
           Back
         </Button>
-        <Button className="w-full">Create a resume</Button>
+        <Button className="w-full">Create</Button>
       </div>
     </form>
   )

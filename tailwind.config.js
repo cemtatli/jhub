@@ -10,7 +10,10 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      padding: {
+        DEFAULT: '2rem',
+        md: '',
+      },
       screens: {
         '2xl': '1200px',
       },
@@ -100,7 +103,7 @@ module.exports = {
       },
       supports: {
         'no-scroll-driven-animations': 'not(animation-timeline: scroll())',
-      },  
+      },
       fontFamily: {
         satoshi: ['Satoshi', 'sans-serif'],
       },

@@ -5,7 +5,7 @@ import { Github, Twitter } from 'lucide-react'
 
 export const Footer = () => {
   return (
-    <footer className="mx-auto w-full  max-w-screen-xl border-t p-4 py-6 lg:py-8">
+    <footer className="mx-auto w-full max-w-screen-xl border-t p-4 py-6 text-sm lg:py-8">
       <div className="md:flex md:justify-between">
         <div className="mb-6 md:mb-0">
           <Logo />
@@ -60,7 +60,7 @@ export const Footer = () => {
         </div>
       </div>
       <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-      <div className="flex flex-col items-center justify-center sm:flex sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col items-center justify-center text-sm sm:flex sm:flex-row sm:items-center sm:justify-between">
         <span className="text-sm sm:text-center">
           © 2023{' '}
           <Link href="/" className="hover:underline">

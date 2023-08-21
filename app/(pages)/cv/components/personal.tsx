@@ -10,7 +10,6 @@ type TFormValues = {
   title: string
   email: string
   phone: number
-  birthday: string
 }
 
 export function Personal() {
@@ -62,10 +61,6 @@ export function Personal() {
         <div className="grid w-full gap-1.5">
           <Label htmlFor="adress">Addres</Label>
           <Textarea cols={10} rows={3} placeholder="Optional" id="adress" />
-        </div>
-        <div className="grid w-full gap-1.5">
-          <Label htmlFor="birthday">Date of birth</Label>
-          <Input type="date" id="birthday" {...register('birthday')} />
         </div>
       </div>
       <div className="mt-4 flex items-center justify-between gap-4">

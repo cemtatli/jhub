@@ -26,7 +26,7 @@ export const popularSearchs: JobsItemProps[] = [
     data: 'tester',
   },
   {
-    count: '2',
+    count: '5',
     title: 'Prompt Engineer',
     slug: 'prompt-engineer',
     data: 'promptengineer',
@@ -38,7 +38,7 @@ export const popularSearchs: JobsItemProps[] = [
     data: 'DevOps Engineer',
   },
   {
-    count: '6',
+    count: '5',
     title: 'Digital Marketing',
     slug: 'digital-marketing',
     data: 'Digital Marketing',

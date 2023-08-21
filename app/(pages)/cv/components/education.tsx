@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label'
 
 import { yupResolver } from '@hookform/resolvers/yup'
 import { resumeEducationSchema } from '@/validations'
+import { ButtonWithIcon } from '@/components/ui/shared/ButtonWithIcon'
 
 type TFormValues = {
   school: string
@@ -61,11 +62,23 @@ export function Education() {
         </div>
         <div className="grid w-full gap-1.5">
           <Label htmlFor="started">Start Date</Label>
-          <Input type="date" id="started" {...register('started')} placeholder="started" />
+          <Input
+            max="2000-1-1"
+            type="date"
+            id="started"
+            {...register('started')}
+            placeholder="started"
+          />
         </div>
         <div className="grid w-full gap-1.5">
           <Label htmlFor="ended">End Date</Label>
-          <Input type="date" id="ended" {...register('ended')} placeholder="ended" />
+          <Input
+            id="ended"
+            type="date"
+            {...register('ended')}
+            placeholder="ended"
+            max="2025-12-31"
+          />
         </div>
       </div>
       <div className="mt-4 flex w-full items-center justify-between gap-4 ">
