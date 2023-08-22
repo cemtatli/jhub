@@ -2,6 +2,9 @@
 
 Jhub, iş arayanların ve iş verenlerin buluştuğu bir platformdur. Kullanıcılar, özgeçmiş oluşturma, iş ilanlarına başvurma ve işverenlerle iletişim kurma gibi iş arama süreçlerini kolayca yönetebilirler.
 
+
+<img src='og.png'/>
+
 ## Özellikler
 
 - Kullanıcılar, kolay bir kayıt süreci ile platforma üye olabilirler.

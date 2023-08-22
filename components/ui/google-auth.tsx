@@ -5,7 +5,7 @@ import { signInWithPopup } from 'firebase/auth'
 
 import { GoogleAuthProvider } from 'firebase/auth'
 import { useRouter } from 'next/navigation'
-import { ButtonWithIcon } from '@/components/ui/shared/ButtonWithIcon'
+import { ButtonWithIcon } from '@/components/ui/ButtonWithIcon'
 import { toast } from 'react-hot-toast'
 import { auth } from '@/app/firebase'
 

@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label'
 
 import { yupResolver } from '@hookform/resolvers/yup'
 import { resumeEducationSchema } from '@/validations'
-import { ButtonWithIcon } from '@/components/ui/shared/ButtonWithIcon'
+import { ButtonWithIcon } from '@/components/ui/ButtonWithIcon'
 
 type TFormValues = {
   school: string

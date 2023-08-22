@@ -61,7 +61,7 @@ export const Footer = () => {
       </div>
       <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
       <div className="flex flex-col items-center justify-center text-sm sm:flex sm:flex-row sm:items-center sm:justify-between">
-        <span className="text-sm sm:text-center">
+        <span className="text-sm sm:text-center tracking-tight">
           © 2023{' '}
           <Link href="/" className="hover:underline">
             Jhub

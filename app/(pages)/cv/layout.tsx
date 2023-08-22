@@ -58,7 +58,7 @@ const CVLayout = () => {
           <Swiper
             modules={[Navigation, Autoplay, A11y, Scrollbar]}
             slidesPerView={1}
-            autoplay={{ delay: 5000 }}
+            autoplay={{ delay: 3000 }}
             loop={true}
             pagination={{ clickable: true }}>
             {swiperData.map((slide, index) => (

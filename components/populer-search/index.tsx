@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { PopularSearchesBadge } from '@/components/populer-search/badge'
-import { InputWithButton } from '@/components/ui/shared/InputWithButton'
+import { InputWithButton } from '@/components/ui/InputWithButton'
 
 export const PopularSearches = () => {
   const [selected, setSelected] = useState<string>('')
