@@ -12,7 +12,6 @@ import {
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Check, ArrowDownWideNarrow } from 'lucide-react'
 import { normalizeString } from '@/utils/normalization'
-import { cities } from '@/mocks/Cities'
 import { Button } from '@/components/ui/button'
 import { popularSearchs } from '@/mocks/PopularSearch'
 

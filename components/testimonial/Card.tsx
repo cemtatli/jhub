@@ -28,7 +28,7 @@ const Card: FC<CardProps> = ({ src, title, comment, name }) => {
           <div className="w-auto p-2">
             <div className="flex flex-wrap items-center -m-1.5">
               <div className="w-auto p-1.5">
-                <Image width={48} height={48} loading='lazy' className='rounded-full ring-1 ring-offset-2 ring-gray-300' src={src} alt={name} />
+                <Image width={48} height={48} loading='lazy' className='rounded-full aspect-square ring-1 ring-offset-2 ring-gray-300' src={src} alt={name} />
               </div>
               <div className="w-auto p-1.5">
                 <h3 className="font-semibold tracking-tight">{name}</h3>

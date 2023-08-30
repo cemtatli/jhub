@@ -63,7 +63,7 @@ export const Testimonial = () => {
               comment="Whereby' s simplicity is unmatched. I can focus on my work instead of struggling with complicated video tools."
               name="Carolanne"
               title="Dynamic Markets Analyst"
-              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/861.jpg"
+              src="/assets/avatars/avatar-1.webp"
             />
             <Card
               comment="I used to dread virtual meetings, but Whereby has changed that. It' s user-friendly and efficient."
@@ -89,13 +89,13 @@ export const Testimonial = () => {
               comment="Using Whereby for client meetings has been a game changer. It's reliable and professional."
               name="Abbie"
               title="Central Solutions Designer"
-              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/487.jpg"
+              src="/assets/avatars/avatar-5.webp"
             />
             <Card
               comment="As a developer, I appreciate how seamless Whereby is for team discussions. It saves us time and frustration."
               name="Brionna"
               title="Forward Creative Developer"
-              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/417.jpg"
+              src="/assets/avatars/avatar-4.webp"
             />
             <Card
               comment="I absolutely love how easy it is to use Whereby. Connecting with others has never been smoother!"

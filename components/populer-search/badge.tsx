@@ -17,7 +17,14 @@ export const PopularSearchesBadge: React.FC<PopularSearchesBadgeProps> = ({ onCl
       {popularSearchs
         .sort((a, b) => parseInt(b.count) - parseInt(a.count))
         .map(({ title, slug, count }) => (
-          <Link key={title} href={`/jobs?search=${slug}`}>
+          <Link
+            key={title}
+            href={{
+              pathname: 'jobs',
+              query: {
+                search: slug,
+              },
+            }}>
             <Badge
               onClick={() => handleBadgeClick(title)}
               className="z-10 w-fit shrink-0 cursor-pointer bg-white p-1.5 px-3 text-sm tracking-tight transition-all duration-300 hover:bg-gray-50"

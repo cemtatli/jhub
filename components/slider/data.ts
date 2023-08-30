@@ -24,4 +24,8 @@ export const SliderData: SliderDataProps[] = [
     src: '/assets/slider/slider-5.webp',
     alt: 'slider-photos',
   },
+  {
+    src: '/assets/slider/slider-6.avif',
+    alt: 'slider-photos',
+  },
 ]

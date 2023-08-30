@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const font = Inter({ subsets: ['latin'] })
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en">
       <body className={font.className}>
         <Header />
         <Wrapper>{children}</Wrapper>

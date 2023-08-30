@@ -2,7 +2,7 @@ import { JobsItemProps } from '@/types'
 
 export const popularSearchs: JobsItemProps[] = [
   {
-    count: '8',
+    count: '5',
     title: 'React Native & Flutter',
     slug: 'react-native-flutter',
     data: 'React Native & Flutter',
@@ -26,7 +26,7 @@ export const popularSearchs: JobsItemProps[] = [
     data: 'tester',
   },
   {
-    count: '5',
+    count: '2',
     title: 'Prompt Engineer',
     slug: 'prompt-engineer',
     data: 'promptengineer',
