@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast'
 import { Header } from '@/components/header'
 import { Wrapper } from '@/components/layout'
+import ClientOnly from '@/components/ClientOnly'
 
 export const metadata: Metadata = {
   title: 'JHubs — find your dream job',
@@ -20,8 +21,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={font.className}>
-        <Header />
-        <Wrapper>{children}</Wrapper>
+        <ClientOnly>
+          <Header />
+          <Wrapper>{children}</Wrapper>
+        </ClientOnly>
         <Toaster position="top-center" />
       </body>
     </html>

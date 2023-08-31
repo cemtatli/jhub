@@ -3,32 +3,31 @@
 import { FC } from 'react'
 import { TwitterIcon } from '../ui/icons'
 import Image from 'next/image'
-import { motion } from "framer-motion";
+
+
 interface CardProps {
   src: string
   name: string
   title: string
   comment: string
 }
-const animate = {
-  hidden: { filter: "blur(10px)", opacity: 0 },
-  visible: { filter: "blur(0px)", opacity: 1 },
-}
 
 const Card: FC<CardProps> = ({ src, title, comment, name }) => {
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      transition={{ duration: 1.5 }}
-      variants={animate}
-      className="flex-shrink-0 w-96 p-4">
-      <div className="p-6 bg-white hover:bg-opacity-50 border border-gray-200 hover:border-gray-300 rounded-xl transition duration-200">
-        <div className="flex flex-wrap justify-between -m-2 mb-4">
+    <div className="w-96 flex-shrink-0 p-4">
+      <div className="rounded-xl border border-gray-200 bg-white p-6 transition duration-200 hover:border-gray-300 hover:bg-opacity-50">
+        <div className="-m-2 mb-4 flex flex-wrap justify-between">
           <div className="w-auto p-2">
-            <div className="flex flex-wrap items-center -m-1.5">
+            <div className="-m-1.5 flex flex-wrap items-center">
               <div className="w-auto p-1.5">
-                <Image width={48} height={48} loading='lazy' className='rounded-full aspect-square ring-1 ring-offset-2 ring-gray-300' src={src} alt={name} />
+                <Image
+                  width={48}
+                  height={48}
+                  loading="lazy"
+                  className="aspect-square rounded-full ring-1 ring-gray-300 ring-offset-2"
+                  src={src}
+                  alt={name}
+                />
               </div>
               <div className="w-auto p-1.5">
                 <h3 className="font-semibold tracking-tight">{name}</h3>
@@ -36,17 +35,21 @@ const Card: FC<CardProps> = ({ src, title, comment, name }) => {
               </div>
             </div>
           </div>
-          <div className="w-auto p-2 shrink-0">
+          <div className="w-auto shrink-0 p-2">
             <TwitterIcon />
           </div>
         </div>
-        <p className='text-sm'>
-          <span>&ldquo;</span>{''}
+        <p className="text-sm">
+          <span>&ldquo;</span>
+          {''}
           <span className="font-semibold">@Jhub</span> {''}
-          <span>{""}{comment}&rdquo;</span>
+          <span>
+            {''}
+            {comment}&rdquo;
+          </span>
         </p>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

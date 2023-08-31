@@ -1,3 +1,4 @@
+import { CareerData } from '@/components/career/mocks/Career'
 import CareerItem from './CareerItem'
 
 const Career = () => {
@@ -13,15 +14,14 @@ const Career = () => {
         </div>
         <div className="mx-auto max-w-3xl">
           <div className="-m-1 flex flex-wrap">
-            <CareerItem
-              job="React Native & Flutter"
-              description="Global"
-              company="Marks - Schiller"
-            />
-            <CareerItem job="Designer" description="Corporate" company="Johns LLC" />
-            <CareerItem job="Specialist" description="Forward" company="Hane and Sons" />
-            <CareerItem job="Associate" description="Forward" company="Jakubowski" />
-            <CareerItem job="Analyst" description="Corporate" company="Welch Inc" />
+            {CareerData.map((career) => (
+              <CareerItem
+                key={career.job}
+                job={career.job}
+                company={career.company}
+                description={career.description}
+              />
+            ))}
           </div>
         </div>
       </div>

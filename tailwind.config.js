@@ -123,7 +123,7 @@ module.exports = {
         'fit-screen-mobile': 'calc(100vh - 4rem)',
       },
       screens: {
-        xs: '450px',
+        xs: '485px',
       },
     },
   },
